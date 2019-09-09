@@ -1,0 +1,23 @@
+\item Dado o programa em \emph{Pascal} abaixo, mostre o acompanhamento de sua 
+execução para três valores de entrada (valores pequenos, por exemplo para 
+$x=0$, $x=10$ e $x=-1$).
+Em seguida, descreva o que o programa faz.
+
+\begin{lstlisting}
+program questao1;
+var
+  m, x, y: integer;
+begin
+  read(x);
+  y := 0;
+  m := 1;
+  while x > 0 do
+    begin
+      y := y + (x mod 2) * m;
+      x := x div 2;
+      m := m * 10;
+    end;
+  writeln(y)
+end.
+\end{lstlisting}
+

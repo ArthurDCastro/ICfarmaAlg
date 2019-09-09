@@ -1,0 +1,462 @@
+\subsection{Exercícios}
+
+\begin{enumerate}
+
+
+\item Latitude e longitude s\~ao especificados em graus, ($^{o}$), minutos ('),
+segundos (''), e dire\c c\~ao (N, S, L, O). Por exemplo, a cidade A fica
+na latitude 22$^{o}$17'34''N e longitude 53$^{o}$41'9''O.
+
+Defina um tipo em \emph{Pascal} 
+cujo nome seja {\bf localizacao}, e que seja constituido
+de {\em longitude} e {\em latitude}, ambas do tipo {\bf coordenadas}. Para
+isto voce ter\'a que definir o tipo {\bf coordenadas} como sendo constituido
+de {\em grau}, {\em minutos}, {\em segundos} e {\em direcao}.
+
+\item Declare um vetor onde cada elemento \'e um registro com os campos: nome, DDD, telefone, CPF, Idade.
+\item Considerando o vetor n\~ao ordenado, encontrar e imprimir o nome do cliente mais jovem. Fa\c ca um 
+procedimento para isto
+\item Ordenar por ordem de nome. Fa\c ca um procedimento para isto.
+\item Dado um CPF, localizar se o nome est\'a no vetor e imprimir todos os dados. Fa\c ca um procedimento para
+isto.
+\item Fa\c ca um procedimento que receba por valor par\^ametros para nome, DDD, telefone, CPF, Idade 
+e o insira no vetor (que j\'a est\'a ordenado) em ordem alfab\'etica. N\~ao vale usar um vetor auxiliar.
+Retornar por refer\^encia o vetor alterado
+
+\item Considere o arquivo de uma empresa (chamado de ``func.dat'' -- um arquivo
+de registros) contendo
+para cada funcionário seu número, seu nível salarial e seu departamento.
+Como a administração desta empresa é feita a nível departamental é
+importante que no arquivo os funcionários de cada um dos departamentos
+estejam relacionados entre si e ordenados sequencialmente pelo seu número.
+Como são frequentes as mudanças interdepartamentais no quadro de
+funcionários, não é conveniente reestruturar o arquivo a cada uma destas
+mudanças.  Desta maneira, o arquivo poderia ser organizado da seguinte
+forma:
+
+\begin{verbatim}
+linha numFunc nivel departamento proximo
+0     123     7     1            5
+1     8765    12    1            -1
+2     9210    4     2            -1
+3     2628    4     3            6
+4     5571    8     2            -1
+5     652     1     1            9
+6     7943    1     3            -1
+7     671     5     3            12
+8     1956    11    2            11
+9     1398    6     1            10
+10    3356    3     1            1
+11    4050    2     2            4
+12    2468    9     3            3
+\end{verbatim}
+
+
+
+
+Em um segundo arquivo (chamado ``depto.dat'' -- um arquivo de registros)
+temos as seguintes informações:
+
+\begin{verbatim}
+codDepto nomeDepto      inicio
+1        vendas         0
+2        contabilidade  8
+3        estoque        7
+4        entrega        2
+\end{verbatim}
+
+Assim, o primeiro funcionário do departamento de vendas é o registro 0 do
+arquivo de funcionários e os demais funcionários do mesmo departamento são
+obtidos seguindo o campo {\tt proximo}.  Ou seja, os funcionários do
+departamento de vendas são os funcionários nos registros: 0, 5, 9, 10 e 1.
+Os funcionários do departamento de contabilidade são os funcionários nos
+registros: 8, 11 e 4.
+
+Escreva um programa em \emph{Pascal} que realize as seguintes operações:
+\begin{itemize}
+\item admissão de novo funcionário
+\item demissão de funcionário
+\item mudança de departamento por um funcionário
+\end{itemize} 
+
+Para estas operações devem ser lidas as informações:
+\begin{itemize}
+\item código do tipo da operação: 0 para fim, 1 para admissão, 2 para
+  demissão e 3 para mudança de departamento
+\item número do funcionário
+\item nível salarial (somente no caso de admissão)
+\item número do departamento ao qual o funcionário passa a pertencer (no
+  caso de admissão e mudança)
+\item número do departamento do qual o funcionário foi desligado (no caso
+  de demissão e mudança)
+\end{itemize}
+
+
+
+O programa deve escrever as seguintes informações:
+\begin{itemize}
+\item os valores iniciais lidos dos arquivos
+\item para cada operação: o tipo da operação realizada, os dados da
+operação e a forma final dos dados (de funcionários e departamentos)
+\end{itemize}
+
+No final do programa novos arquivos ``func.dat'' e ``depto.dat'' são
+gerados com os dados atualizados.
+
+Detalhamento:
+\begin{itemize}
+\item a quantidade máxima de funcionários é 1000
+\item a quantidade máxima de departamentos é 20
+\item se a quantidade máxima for ultrapassada o programa deve dar uma
+mensagem de erro
+\item se for requisitada a remoção ou mudança de um funcionário não
+  existente no departamento especificado o programa deve dar uma mensagem
+  de erro.
+\item quando for requisitada a inserção de um novo funcionário é preciso
+  verificar se um funcionário com o mesmo número já existe.
+\item se o código de operação for inválido o programa deve continuar lendo
+um novo código até que ele seja 0 (zero), 1 (um), 2 (dois) ou 3 (três).
+\end{itemize}
+
+
+\item Uma empreiteira tem contratos para construir diversos tipos de casa: moderno,
+fazenda, colonial, etc.   A quantidade de material empregada para cada
+tipo de casa está armazenada em um arquivo chamado  ``material.dat''.
+Este é um {\em arquivo de registros} contendo: o tipo de casa e as respectivas
+quantidades de cada material necessárias para sua
+construção. Existem no máximo 50 tipos de casas e 100 tipos distintos de
+materiais. 
+
+Cada tipo de casa é representado por um código inteiro no intervalo [1,50].
+Por exemplo:  
+\begin{itemize}
+\item 1: moderno
+\item 2: fazenda
+\item 3: colonial, {\bf ...}
+\end{itemize}
+
+Cada tipo de material é representado por um código inteiro no intervalo
+[1,100].  Por exemplo: 
+\begin{itemize}
+\item 1: ferro
+\item 2: madeira
+\item 3: vidro
+\item 4: tinta
+\item 5: tijolo, {\bf ...}
+\end{itemize}
+
+Em um segundo arquivo, chamado ``preco.dat'', encontram-se os
+preços de cada um dos materiais.
+Este também é um {\em arquivo de registros} contendo: o código do material
+e o seu 
+respectivo preço.   O código do material segue a mesma codificação
+utilizada pelo arquivo de materiais.
+
+Escreva um programa \emph{Pascal} que leia os dados do arquivo ``material.dat'' em
+uma matriz e o dados do arquivo ``preco.dat'' em um vetor, como ilustrado
+abaixo.
+
+\item Usando as estruturas de dados abaixo escreva um procedimento em
+\emph{Pascal} que recebe como parâmetro uma estrutura do tipo 
+\verb+TAGENDA+ e ordena de forma crescente o vetor \verb+pessoa+ 
+dessa estrutura tomando como referência para a ordenação  
+o campo \verb+nome+ da estrutura \verb+TPESSOA+. Ou seja,
+ordena uma agenda pessoal de telefones e endereços em ordem 
+crescente do nome das pessoas presentes na agenda.
+Você \emph{deve} usar a função $compara( r, s )$, que recebe dois 
+parâmetros do tipo \verb+string+ e retorna 0 se $r$ e $s$ são
+iguais, 1 se $r$ é lexicograficamente maior que $s$ e $-1$ 
+se $r$ é lexicograficamente menor que $s$. Um nome $n_1$ é 
+lexicograficamente maior que um nome $n_2$ se $n_1$ aparece 
+depois de $n_2$ numa ordenação alfabética crescente desses
+nomes.
+\begin{center}
+\begin{small}
+\begin{verbatim}
+Const
+  MAX = 1000;
+Type
+   TPESSOA = record
+                nome: string;
+                telefone: string;
+                endereco: string
+             end; 
+   TAGENDA = record
+                pessoa: array [1..MAX] of TPESSOA;
+                tamanho: integer
+             end;
+\end{verbatim}
+\end{small}
+\end{center}
+
+\item Uma matriz é dita esparsa quando a maioria dos seus elementos possui valor $0.0$
+(zero). Neste caso, a representação da matriz sob a forma tradicional (um
+\emph{array} bidimensional) implica em uma utilização ineficiente da memória.
+Por isso, matrizes esparsas são freqüentemente representadas como vetores de
+elementos não nulos, sendo que cada elemento contém suas coordenadas e seu
+valor.
+
+Exemplo:
+\begin{displaymath}
+    \mathbf{M} = \left[ \begin{array}{cccc}
+                         0 & 0 & 0 & 1.2 \\
+                         7.3 & 0 & 99 & 0 \\
+                         0 & 2 & 0 & 0 \\
+                         0 & 17 & 0 & 0
+                        \end{array} \right] \Longleftrightarrow   
+    \mathbf{M_e} = \left[ \begin{array}{ccccc}
+                         \begin{array}{|c|c|}
+                                1 & 4 \\ \hline \multicolumn{2}{|c|}{1.2}
+                               \end{array} &
+                         \begin{array}{|c|c|}
+                                2 & 1 \\ \hline \multicolumn{2}{|c|}{7.3}
+                               \end{array} &
+                         \begin{array}{|c|c|}
+                                2 & 3 \\ \hline \multicolumn{2}{|c|}{99}
+                               \end{array} &
+                         \begin{array}{|c|c|}
+                                3 & 2 \\ \hline \multicolumn{2}{|c|}{2}
+                               \end{array} &
+                         \begin{array}{|c|c|}
+                                4 & 2 \\ \hline \multicolumn{2}{|c|}{17}
+                               \end{array}
+                    \end{array} \right]
+\end{displaymath}
+Para representar estas matrizes em \emph{Pascal}, podemos definir as
+seguintes estruturas de dados:
+\begin{lstlisting}
+Const MAX = 1000; MAX_ESP = MAX*MAX/10;
+Type t_matriz = record
+        lin,col : integer;
+        dados : array [1..MAX, 1..MAX] of real;
+     end;
+     elemento = record
+        l,c : integer;
+        val : real;
+     end;
+     t_matrizesp = record
+        tam : integer;
+        dados : array [1..MAX_ESP] of elemento;
+     end;
+\end{lstlisting}
+
+Utilizando as estruturas de dados definidas acima, faça:
+\begin {enumerate}
+
+\item  Escreva uma função que transforme uma matriz do tipo
+\verb|t_matriz| em uma matriz do tipo \verb|t_matrizesp|.
+
+\item  Escreva uma função que transforme uma matriz do tipo
+\verb|t_matrizesp| em uma matriz do tipo \verb|t_matriz|.
+ 
+\item  Escreva uma função que receba duas matrizes do tipo 
+\verb|t_matrizesp| e imprima o resultado da \textbf{soma} destas matrizes. O
+resultado deve ser impresso na forma bidimensional, com os valores de cada
+linha separados por espaços.
+
+\end{enumerate}
+
+\item Verdadeiro ou falso: 
+\begin{itemize}
+   \item  um record deve ter pelo menos dois campos
+   \item  os campos de um record tem que ter nomes diferentes
+   \item  um record deve ter um nome diferente de qualquer um dos seus campos.
+\end{itemize}
+
+\item Suponha que a linguagem \emph{Pascal} foi modificada para permitir que o 
+   símbolo ponto "." possa fazer parte de identificadores. Qual problema
+   isto poderia causar? Dê um exemplo.
+
+\item Esta definição é legal? Porque não? 
+
+\begin{verbatim}
+   TYPE 
+        Ponto = RECORD
+                    quantidade: integer;
+                    corte: Tamanho;
+                END;
+        Tamanho = (mini, medio, maxi);
+\end{verbatim}
+
+\item 
+ Latitudes e  longitudes são especificadas em graus  (o), minutos ('),
+   segundos ('') e direção (norte, sul, leste, oeste). Suponha que uma
+   cidade   esteja   na    latitude   22o17'34''   norte   e   longitude
+   53o41'9''oeste.  Armazene esta localização  na variável  Cidade, como
+   declarada abaixo:
+    
+\begin{verbatim}
+   TYPE 
+        TipoDirecao = (norte, sul, leste, oeste);
+        Coordenadas = RECORD
+                          graus: 0..180;
+                          minutos, segundos: 0..60;
+                          direcao: TipoDirecao;
+                      END;
+        Localizacao = RECORD
+                          latitude, longitude: Coordenadas;
+                      END
+   VAR
+        Cidade: Localizacao;
+\end{verbatim}
+
+\item Suponha que temos as seguintes definições e declarações abaixo:
+
+\begin{verbatim}
+   TYPE 
+        NumTelefone = RECORD
+                          Area, Prefixo, Numero: integer;
+                      END;
+   VAR
+        Casa, Escritorio, Celular: NumTelefone;
+\end{verbatim}
+
+   Escreva código \emph{Pascal} par testar  se Escritorio e Celular estão sobre
+   o mesmo código de área e para atribuir o mesmo número do Celular como
+   sendo o do Escritório.
+
+\item Criar registros para as seguintes configurações da vida real:
+\begin{itemize}
+  \item Pessoas com nome, endereço, telefone, sexo, idade e salário;
+   \item Planetas  com massa, distância  média do sol, número  de satélites,
+     nome, diâmetro. 
+   \item Cursos,  com alunos e suas  notas, períodos em  que são oferecidos,
+     professor, horário.
+\end{itemize}
+
+\item Uma matriz é dita \textit{esparsa} se o 
+número de elementos não nulos for bastante pequeno com relação
+ao número total de elementos da matriz. Você deve fazer um programa
+que leia do teclado uma matriz qualquer de números \textit{reais} e crie um 
+vetor que armazene somente os elementos não nulos da matriz. Cada
+posição do vetor deve ser um registro contendo o valor do elemento,
+e a posição desse elemento na matriz (linha e coluna).
+Imprima o resultado. A maneira de definir o vetor faz parte da prova.
+Exemplo:
+Seja a matriz $4 \times 5$ abaixo:
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}  \hline
+0.0  & 0.0 & 3.0 & 0.0  & 1.7 \\ \hline
+-1.1 & 0.0 & 0.0 & 0.0  & 0.0 \\ \hline
+0.0  & 0.0 & 0.0 & -2.1 & 0.0 \\ \hline
+0.0  & 0.0 & 2.5 & 0.0  & 0.0 \\ \hline
+\end{tabular}
+\end{center}
+
+Seu programa deverá construir um 
+vetor que permita imprimrir as seguintes informações:
+
+\begin{itemize}
+\item o elemento 3.0 está na posição (1,3) do vetor;
+\item o elemento 1.7 está na posição (1,5) do vetor;
+\item o elemento -1.1 está na posição (2,1) do vetor;
+\item o elemento -2.1 está na posição (3,4) do vetor;
+\item o elemento 2.5 está na posição (4,3) do vetor;
+\end{itemize}
+
+\item Considere uma estrutura de vetores para representar uma matriz 
+esparsa, tal como você definiu na questão anterior. Faça
+um procedimento para imprimir a matriz completa, contendo todos
+os elementos nulos e não nulos 
+(não precisa fazer o programa todo, basta o procedimento).
+Por exemplo, dado vetor com as informações descritas no 
+exemplo da questão anterior, a saída do seu programa deve
+ser exatamente a matriz apresentada no início do exemplo.
+
+\item Considere o tipo PGM para imagens como definido na seção~\ref{pgm}.
+Nas questões que seguem, considere as seguintes estruturas de dados e 
+assinaturas de funções e procedimentos:
+
+\begin{lstlisting}
+const MAX=10000;
+
+type
+     matriz = array [1..MAX,1..MAX] of integer;
+
+     vetor  = array [1..MAX] of integer;
+
+     imagem = record
+                 col, lin, maior: integer;
+                 m: matriz;
+     end;
+
+     imgcompactada = record
+                 tam: integer;
+                 v: vetor;
+     end;
+  
+function calcula_valor_medio (var I: imagem): integer;
+(* funcao que retorna o valor medio dos pixels da imagem, isto eh
+   a soma de todos os elementos dividido pelo numero de elementos *)
+
+procedure ler (var I: imagem);
+(* procedimento que le uma imagem no formato PGM *)
+
+procedure imprime_imagem (var I: imagem);
+(* procedimento que imprime uma imagem no formato PGM *)
+procedure binariza (var I: imagem; limiar: integer);
+(* procedimento que transforma a imagem de tons de cinza para preto e branco
+   para isto, os pixels que forem maiores que o limiar devem se tornar brancos
+   e os que forem menores ou iguais a este mesmo limiar devem se tornar pretos *)
+
+procedure compacta_imagem (var I: imagem; var C: imgcompactada);
+(* procedimento que recebe uma imagem no formato PGM e cria um vetor C
+   que eh uma representacao compactada desta                           *)
+
+procedure imprime_img_compactada (var C: imgcompactada);
+(* procedure que recebe uma imagem compactada e a imprime no formato PGM *)
+\end{lstlisting}
+
+\begin {enumerate}
+
+\item  Implemente estas funções e procedimentos e faça um programa que 
+receba um certo número $N$ de imagens PGM em tons de cinza (onde 0
+representa preto e branco é representado pelo maior valor da imagem) e
+imprima a imagem binarizada, isto é, em preto e branco (onde 0 
+representa preto e 1 representa branco). Note que o limiar é obtido
+pelo valor médio dos pixels.
+
+\item 
+Implemente um procedimento que gere um vetor que representa a matriz 
+binarizada de forma compacta. Para isto, use a seguinte ideia: como a
+matriz só tem zeros e uns, vamos substituir sequências de uns pelo número
+de uns consecutivos. Os elementos vão sendo colocados no vetor, de maneira
+linear, cada linha seguinte é concatenada à anterior. Veja o exemplo:
+Exemplo:
+\begin{itemize}
+\vspace*{-2mm}      
+    \item \textbf{Imagem binarizada}:
+    \begin{verbatim}
+    P2
+    11 10
+    1
+    1  1  1  1  0  1  1  1  1  1  0 
+    1  1  0  1  1  1  1  1  1  1  1 
+    0  0  1  0  0  0  1  1  1  0  0
+    1  1  1  1  1  1  1  1  1  1  1
+    0  0  0  1  1  1  1  1  0  0  0
+    0  0  0  1  1  1  1  1  1  1  1
+    1  1  1  0  1  1  1  1  1  1  1
+    1  1  1  1  1  1  1  0  1  1  1
+    1  1  1  1  1  1  1  1  1  0  0
+    0  1  1  1  1  1  1  1  1  1  1
+    \end{verbatim}
+
+\vspace*{-4mm}      
+    \item \textbf{Imagem compactada}:
+    \begin{verbatim}
+36
+4 0 5 0 2 0 8 0 0 1 0 0 0 3 0 0 11 0 0 0 5 0 0 0 0 0 0 11 0 14 0 12 0 0 0 10
+\end{verbatim}
+\end{itemize}
+
+Isto é, a primeira linha da matriz possui 4 uns consecutivos seguido de um
+zero e outros 5 uns consecutivos, por isto, o vetor contém seus primeiros
+elementos ``4, 0 e 5''. Preste atenção antes de escrever o código. Você pode 
+definir, se precisar, funções, procedimentos ou estruturas de dados adicionais.
+\end{enumerate}
+
+
+
+\end{enumerate}

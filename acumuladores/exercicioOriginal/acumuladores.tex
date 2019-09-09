@@ -1,0 +1,184 @@
+
+\item Fazer um programa em \emph{Pascal} para ler do teclado
+um número inteiro $m$ e em seguida
+uma sequência de $m$ números reais e imprimir a média aritmética deles.
+Isto é, dados os números $N_1, N_2, \ldots, N_m$, calcular:
+
+\[
+\frac{N_1 + N_2 + \ldots + N_m}{m}
+\]
+
+\item Fazer um programa em \emph{Pascal} para calcular
+o produto dos números ímpares de $A$ até $B$,
+onde $A \le B$ são lidos do teclado. Considere que $A$ e $B$ são
+sempre ímpares. Isto é, calcular:
+
+\[
+A \times (A+2) \times (A+4) \times \ldots \times B
+\]
+
+\item Fazer um programa em \emph{Pascal} para
+     calcular o  valor da  soma dos  quadrados dos  primeiros  50 inteiros
+     positivos não nulos.
+
+\[
+\sum_{i=1}^{50}{i^2} = 1^2 + 2^2 + 3^2 + \ldots + 50^2
+\]
+
+\item Ler um inteiro positivo N diferente de zero e calcular a soma:
+   $1^{3} + 2^{3} + ... + N^{3}$.
+
+\item Fazer um programa em \emph{Pascal} que,
+    dados dois números inteiros positivos, determine quantas vezes o
+    primeiro  divide exatamente  o segundo.  Se o  primeiro não  divide o
+    segundo o número de vezes é zero. Por exemplo, 72 pode ser dividido
+    exatamente por 3 duas vezes.
+
+\begin{minipage}{5cm}
+\begin{verbatim}
+Entrada:
+72 3
+\end{verbatim}
+\end{minipage} \
+\begin{minipage}{5cm}
+\begin{verbatim}
+Saída:
+2
+\end{verbatim}
+\end{minipage}
+
+\item
+Uma agência governamental deseja conhecer a distribuição da população do
+país por faixa salarial. Para isto, coletou dados do
+último censo realizado e criou um arquivo contendo, em cada linha, a
+idade de um cidadão particular e seu salário. As idades variam de zero a
+110 e os salários variam de zero a 19.000,00 unidades da moeda local
+(salário do seu dirigente máximo). Considere o salário mínimo igual a 450,00 unidades da moeda local.
+
+As faixas salariais de interesse são as seguintes:
+\begin{itemize}
+\item de 0 a 3 salários mínimos
+\item de 4 a 9 salários mínimos
+\item de 10 a 20 salários mínimos
+\item acima de 20 salários mínimos.
+\end{itemize}
+Fazer um programa em \emph{Pascal} que leia o arquivo de entrada e produza como
+saída os percentuais da população para cada faixa salarial
+de interesse. A última linha, que não deve ser processada, contém dois zeros.
+
+\begin{minipage}{5cm}
+\begin{verbatim}
+Entrada:
+25 240.99
+48 2720.77
+37 4560.88
+34 19843.33
+23 834.15
+90 315.87
+78 5645.80
+44 150.33
+56 2560.00
+67 2490.05
+0 0.00  
+\end{verbatim}
+\end{minipage} \
+\begin{minipage}{5cm}
+\begin{verbatim}
+Saída:
+4%
+3%
+2%
+1%
+\end{verbatim}
+\end{minipage}
+
+\item (*) Escrever um programa em \emph{Pascal} que leia do teclado
+uma sequência de números inteiros até que seja lido um número
+que seja o dobro ou a metade do anteriormente lido.
+O programa deve imprimir na saída os seguintes valores:
+\begin{itemize}
+\item a quantidade de números lidos;
+\item a soma dos números lidos;
+\item os dois valores lidos que forçaram a parada do programa.
+\end{itemize}
+
+Exemplo 1:
+\begin{verbatim}
+Entrada:
+-549 -716 -603 -545 -424 -848
+Saída:
+6 -3685 -424 -848
+\end{verbatim}
+
+Exemplo 2:
+\begin{verbatim}
+Entrada
+-549 -716 -603 -545 -424 646 438 892 964 384 192
+Saída
+11 679 384 192
+\end{verbatim}
+
+\item  Aqui temos uma forma peculiar de realizar uma multiplicação entre
+dois números: multiplique o primeiro por 2 e divida o segundo por 2
+até que o primeiro seja reduzido a 1. Toda vez que o primeiro for
+impar, lembre-se do segundo. Não considere qualquer fração durante
+o processo. O produto dos dois números é igual a soma dos números
+que foram lembrados. Exemplo: $53 \times 26 =$
+
+\begin {tabbing}
+00012345\=10002345\=10002345\=10002345\=12000345\=12000345\=12000345\=12300045\=12345\=12345\=12345 \kill
+53 \> 26 \> 13 \> 6 \> 3 \> 1 \\
+26 \> 52 \> 104 \> 208 \> 416 \> 832 \\
+\\
+26 + \> \> 104 + \> \> 416 + \> 832 = 1378
+\end {tabbing}
+
+Fazer um programa em \emph{Pascal}
+que receba dois números inteiros e retorne o produto deles
+do modo como foi especificado acima.
+
+\begin{minipage}{5cm}
+\begin{verbatim}
+Entrada:
+53
+26
+\end{verbatim}
+\end{minipage} \
+\begin{minipage}{5cm}
+\begin{verbatim}
+Saída:
+1378
+\end{verbatim}
+\end{minipage}
+
+\item Fazer um programa em \emph{Pascal} para
+    ler  uma massa de dados onde  cada linha contém dois  valores numéricos
+    sendo o primeiro do tipo real e o segundo do tipo inteiro. O segundo
+    valor é o peso atribuído ao primeiro valor. O
+    programa deve calcular a média ponderada dos diversos valores lidos.
+    A última
+    linha de  dados contém os  únicos números zero.  Esta linha não  deve ser
+    considerada no cálculo da média. Isto é, calcular o seguinte, supondo
+    que $m$ linhas foram digitados:
+
+\[
+\frac{N_1 \times P_1 + N_2 \times P_2 + \ldots + N_m \times P_m}{P_1 + 
+ P_2 + \ldots P_m}
+\]
+\begin{minipage}{5cm}
+\begin{verbatim}
+Entrada:
+60 1
+30 2
+40 3
+0 0
+\end{verbatim}
+\end{minipage} \
+\begin{minipage}{5cm}
+\begin{verbatim}
+Saída:
+40
+\end{verbatim}
+\end{minipage}
+
+

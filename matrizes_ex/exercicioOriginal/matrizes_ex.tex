@@ -1,0 +1,964 @@
+\subsection{Exercícios}
+
+
+\begin{enumerate}
+
+\item Dada uma matriz real A com $m$ linhas e $n$ colunas e um vetor real $V$ 
+com $n$ elementos, determinar o produto  de $A$ por $V$. 
+
+\item Um  vetor real $X$ com $n$  elementos é apresentado como  resultado 
+de um sistema de  equações lineares $Ax=B$ cujos  coeficientes são representados
+em uma  matriz real $A  (m \times n)$  e os lados  direitos das equações  em um
+vetor real $B$ de $m$ elementos.  Verificar se o vetor $X$ é realmente solução
+do sistema dado. 
+
+\item Dizemos que uma  matriz inteira $A (n \times n)$ é 
+uma matriz de permutação
+se em cada linha e em cada  coluna houver $n-1$ elementos nulos e um único
+elemento igual a 1.  Dada uma matriz inteira $A (n \times  n)$ verificar se 
+$A$ é de permutação. Exemplos:
+
+\begin{center}
+\begin{tabular}{cccc}
+0 & 1 & 0 & 0 \\ 
+0 & 0 & 1 & 0 \\
+1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{tabular}
+\end{center}
+
+é de permutação, enquanto que esta outra não é:
+
+\begin{center}
+\begin{tabular}{cccc}
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+1 & 0 & 0 & 0 \\
+0 & 0 & 0 & 2 \\
+\end{tabular}
+\end{center}
+
+\item Dada uma matriz  $A (n \times m)$ 
+imprimir o número de  linhas e o número de
+colunas nulas da matriz. Exemplo: a matriz abaixo 
+tem duas linhas e uma coluna nulas. 
+
+\begin{center}
+\begin{tabular}{cccc}
+0 & 0 & 0 & 0 \\
+1 & 0 & 2 & 2 \\
+4 & 0 & 5 & 6 \\
+0 & 0 & 0 & 0 \\
+\end{tabular}
+\end{center}
+
+
+
+\item  Dizemos  que uma matriz  quadrada inteira é  um quadrado mágico  se a
+soma dos elementos de cada linha,  a soma dos elementos de cada coluna e
+a  soma dos  elementos das  diagonais principal  e secundária  são todos
+iguais.  Exemplo:
+
+\begin{center}
+\begin{tabular}{ccc}
+8 &  0 & 7 \\
+4 &  5 & 6 \\
+3 & 10 & 2 \\
+\end{tabular}
+\end{center}
+
+é um quadrado mágico pois 
+8+0+7 = 4+5+6 = 3+10+2 = 8+4+3 = 0+5+10 = 7+6+2 = 8+5+2 = 3+5+7 = 15.
+
+\begin{enumerate}
+\item Dada  uma matriz  quadrada  $A (n \times m)$,  
+verificar  se $A$  é um  quadrado mágico. 
+\item Informe quantas são e quais são as submatrizes não triviais
+      (isto é, não pode ser a matriz constituída por unicamente um elemento, 
+      uma linha e uma coluna) que definem quadrados mágicos. 
+      Por exemplo, a matriz do exemplo acima
+      tem 4 submatrizes de tamanho $2 \times 2$, duas submatrizes de 
+      tamanho $2 \times 3$, etc, e uma única submatriz de dimensão
+      $3 \times 3$;
+\begin{itemize}
+\item Armazene de alguma maneira as 
+      informações necessárias sobre a localização precisa de cada uma das 
+      submatrizes não triviais que definem quadrados mágicos;
+\item Imprima a qualquer tempo algum quadrado mágico armazenado;
+\item Dado uma dimensão qualquer, digamos $N$, imprima todas os 
+      quadrados mágicos de dimensão $N$ contidos na matriz original.
+\end{itemize}
+\end{enumerate}
+
+
+\item Implemente o quadrado ``quase magico''.  
+Um quadrado quase magico é aquele em que as somas das linhas e a somas das
+colunas resultam em um mesmo valor, mas a soma dos elementos das 
+diagonais não.  O programa deve pedir a dimensão do
+quadrado a ser impresso, que deve ser um número ímpar entre 1 e 99.
+
+
+
+\item Um jogo  de palavras cruzadas pode ser representado  por uma matriz $A
+(n \times  m)$ onde cada posição da  matriz corresonde a um  quadrado do jogo,
+sendo  que 0  indica  um quadrado  em  branco e  -1  indica um  quadrado
+preto.  Colocar as  numerações de  início de  palavras  horizontais e/ou
+verticais  nos   quadrados  correspondentes  (substituindo   os  zeros),
+considerando que uma palavra deve ter pelo menos duas letras. 
+
+Exemplo: Dada a matriz:
+\begin{center}
+\begin{tabular}{cccccccc}
+ 0 & -1 &  0 & -1 & -1 &  0 & -1 &  0 \\
+ 0 &  0 &  0 &  0 & -1 &  0 &  0 &  0 \\
+ 0 &  0 & -1 & -1 &  0 &  0 & -1 &  0\\
+-1 &  0 &  0 &  0 &  0 & -1 &  0 &  0\\
+ 0 &  0 & -1 &  0 &  0 &  0 & -1 & -1\\
+\end{tabular}
+\end{center}
+
+A saída deveria ser:
+\begin{center}
+\begin{tabular}{cccccccc}
+ 1 & -1 &  2 & -1 & -1 &  3 & -1 &  4 \\
+ 5 &  6 &  0 &  0 & -1 &  7 &  0 &  0 \\
+ 8 &  0 & -1 & -1 &  9 &  0 & -1 &  0\\
+-1 & 10 &  0 & 11 &  0 & -1 & 12 &  0\\
+13 &  0 & -1 & 14 &  0 &  0 & -1 & -1\\
+\end{tabular}
+\end{center}
+
+\item Uma matriz $D (8 \times 8)$ 
+pode representar a posição atual de um jogo de damas, 
+sendo que 0 indica uma casa vazia, 1 indica uma casa ocupada por uma peça branca
+e -1 indica uma casa ocupada por uma peça preta. Supondo que as peças pretas
+estão se movendo no sentido crescente das linhas da matriz $D$, determinar
+as posições das peças pretas que:
+
+\begin{itemize}
+\item podem tomar peças brancas;
+\item podem mover-se sem tomar peças brancas;
+\item não podem se mover.
+\end{itemize}
+
+\item Deseja-se atualizar as contas correntes dos clientes de uma agência
+bancária. É dado o cadastro de $N$ clientes contendo para cada cliente
+o número de sua conta e seu saldo. O cadastro está ordenado pelo número 
+da conta. Em seguida é dado o número de operações realizadas no dia, e, 
+para cada operação, o número da conta, uma letra $C$ ou $D$ indicando se a
+operação é de crédito ou débido, e o valor da operação. Emitir o cadastro
+de clientes atualizado. Pode ser modelado como uma matriz $N \times 2$.
+
+
+\item Reordenar a matriz do exercício anterior 
+por ordem de saldo, do maior para o menor. 
+
+
+\item Os elementos $M[i,j]$ de uma matriz $M (n \times n)$ 
+representam os custos de
+transporte da cidade $i$ para a cidade $j$. Dados $n$ itinerários lidos
+do teclado, cada um
+com $k$ cidades, calcular o custo total para cada itinerário. Exemplo:
+
+\begin{verbatim}
+4 1 2 3
+5 2 1 400
+2 1 3 8
+7 1 2 5
+\end{verbatim}
+
+O custo do itinerário 1 4 2 4 4 3 2 1 é: 
+M[1,4] + M[4,2] + M[2,4] + M[4,4] + M[4,3] + M[3,2] + M[2,1] =
+3 + 1 + 400 + 5 + 2 + 1 + 5 = 417.
+
+
+\item Considere $n$ cidades numeradas de 1 a $n$ que estão interligadas por
+uma série de estradas de mão única. As ligações entre as cidades são 
+representadas pelos elementos de uma matriz quadrada $L (n \times n)$ cujos
+elementos L$[i,j]$ assumem o valor 0 ou 1 conforme exista ou não estrada
+direta que saia da cidade $i$ e chegue na cidade $j$. Assim, os elementos
+da $i$-ésima linha indicam as estradas que saem da cidade $i$ e os 
+elementos da $j$-ésima coluna indicam as estradas que chegam à cidade $j$.
+Por convenção, $L[i,i]=1$. A figura abaixo ilustra um exemplo para $n=4$.
+
+\begin{center}
+\begin{tabular}{ccccc}
+  & A & B & C & D \\
+A & 1 & 1 & 1 & 0 \\
+B & 0 & 1 & 1 & 0 \\
+C & 1 & 0 & 1 & 1 \\
+D & 0 & 0 & 1 & 1 \\
+\end{tabular}
+\end{center}
+
+Por exemplo, existe um caminho direto de $A$ para $B$ mas não de $A$ para $D$.
+
+\begin{enumerate}
+\item Dado $k$, determinar quantas estradas saem e quantas chegam à cidade $k$.
+\item  A qual das cidades chega o maior número de estradas?
+\item Dado $k$, verificar se todas as ligações diretas entre a cidade $k$ e 
+   outras são de mão dupla;
+\item  Relacionar as cidades que possuem saídas diretas para a cidade $k$;
+\item Relacionar, se existirem:
+  \begin{itemize}
+   \item As cidades isoladas, isto é, as que não têm ligação com nenhuma outra;
+   \item As cidades das quais não há saída, apesar de haver entrada;
+   \item As cidades das quais há saída sem haver entrada;
+  \end{itemize}
+\item Dada uma sequência de m inteiros cujos valores estão entre 1 e $n$,
+   verificar se é possível realizar o roteiro correspondente. No 
+   exemplo dado, o roteiro representado pela sequência ($m=5$) 3 4 3 2 1
+   é impossível;
+\item Dados $k$ e $p$, determinar se é possível ir da cidade $k$ até a cidade 
+   $p$
+   pelas estradas existentes. Você consegue encontrar o menor caminho
+   entre as duas cidades?
+\item Dado $k$, determinar se é possível, partindo de $k$, passar por todas as
+   outras cidades uma única vez e retornar a $k$.
+\end{enumerate}
+
+\item Uma matriz transposta $M^T$ é o resultado da troca de linhas por colunas em uma determinad
+a matriz $M$.
+Escreva um programa que leia duas matrizes ($A$ e $B$), e testa se $B = A +
+ A^T$.
+
+\item Fazer procedimentos que recebam três parâmetros:  uma matriz e dois
+   inteiros representando as dimensões da matriz. Retornar: 
+  \begin{enumerate} 
+    \item a transposta de matriz; 
+    \item a soma das duas matrizes;
+    \item a multiplicação das duas matrizes.
+  \end{enumerate} 
+
+ \item Faça um programa que leia duas matrizes $A$
+ e $B$ quaisquer e imprima a transposta de  $B$ se a transposta de $A$
+ for igual a $B$.
+
+
+
+\item Fazer uma função que receba  como parâmetros:  dois  vetores de
+   reais    e   dois   inteiros    representando   as    dimensões   dos
+   vetores. Retornar o produto escalar dos dois vetores (real). 
+   Refazer a multiplicação de matrizes usando esta função. 
+
+
+\item Faça um programa que, dadas $N$ datas em uma
+matriz DATAS$_{N\times3}$, onde a primeira coluna corresponde ao dia, a segunda ao
+mês e a terceira ao ano, coloque essas datas em ordem cronológica
+crescente. Por exemplo:
+
+\[
+DATAS=\left( \begin{array}{ccc}
+5&1&1996\\
+25&6&1965\\
+16&3&1951\\
+15&1&1996\\
+5&11&1965\\
+\end{array}
+\right)
+DATAS=\left( \begin{array}{ccc}
+16&3&1951\\
+25&6&1965\\
+5&11&1965\\
+5&1&1996\\
+15&1&1996\\
+\end{array}
+\right)
+\]
+
+
+\item Verifique se a matriz $A$ \'e sim\'etrica, isto \'e, se $A[i,j]=A[j,i], \forall i, j \le M$.
+Fa\c ca uma fun\c c\~ao que retorne 1 em caso afirmativo, 0 caso contr\'ario.
+
+\item Uma matriz $B$ é dita inversa da matriz $A$ quando $A \times B = I$, 
+onde $I$ é a matriz identidade e $\times$ é a operação de multiplicação
+de matrizes. A matriz identidade é a matriz quadrada onde os elementos da 
+diagonal principal são 1 e os demais 0 ($I[i,j] = 1$ se $i=j$ e 
+$I[i,j] = 0$ se $i \neq j$).  Escreva um programa em \emph{Pascal} que 
+leia duas matrizes e testa se a segunda é a inversa da primeira.
+
+
+
+
+
+\item Considere uma matriz $M$ de tamanho $N \times M$
+utilizada para representar gotas de água (caractere $G$) em uma
+janela. A cada unidade de tempo $T$, as gotas descem uma posição na
+matriz, até que atinjam a base da janela e desapareçam. Considere que
+a chuva parou no momento em que seu programa iniciou.
+
+Exemplo:
+\begin{small}
+\begin{verbatim}
+         Passo T=0           Passo T=1               Passo T=4
+     -----------------   -----------------       ----------------- 
+     |   G        G  |   |               |       |               |
+     |       G       |   |   G        G  |       |               |
+     |               |   |       G       |       |               |
+     |     G   G     |   |               |  ...  |               |  ...
+     |               |   |     G   G     |       |   G        G  |
+     |               |   |               |       |       G       |
+     |               |   |               |       |               |
+     +++++++++++++++++   +++++++++++++++++       +++++++++++++++++
+\end{verbatim}
+\end{small}
+
+Faça um programa em que:
+
+\begin {enumerate}
+
+\item 
+Leia as coordenadas iniciais das gotas de água na matriz. O canto
+superior esquerdo da matriz (desconsiderando as bordas) possui
+coordenada $(1,1)$. A coordenada $(0,0)$ indica o término da
+leitura. Coordenadas inválidas devem ser desconsideradas.
+
+Exemplo de entrada para a matriz acima (em $T=0$):
+\begin{small}
+\begin{verbatim}
+    1 4
+    1 13
+    4 6
+    2 8
+    100 98
+    4 10
+    0 0
+\end{verbatim}
+\end{small}
+Note que a entrada $(100,98)$ deve ser descartada pois é inválida para
+a matriz do exemplo.
+
+\item 
+Imprima, a cada unidade de tempo $T$, o conteúdo da matriz $M$,
+atualizando a posição das gotas $G$ até que não reste nenhuma gota na
+janela.
+\end{enumerate}
+
+
+\item Modifique seu programa da questão anterior de modo que as gotas que estão
+inicialmente na primeira linha da janela desçam com o dobro da
+velocidade das outras gotas. Ou seja, as gotas que iniciam na primeira
+linha descem duas linhas na matriz a cada instante $T$. As gotas mais
+rápidas podem encontrar gotas mais lentas pelo caminho, neste caso a
+gota mais lenta desaparece ficando somente a mais rápida.
+
+\item Modifique novamente o programa da questão anterior considerando que,
+desta vez, a 
+cada unidade de tempo $T$, $NG$ novas gotas são inseridas na matriz. Além
+disso, as gotas descem na matriz até que atinjam a base da janela e desapareçam.
+Inicialmente não há gotas na janela, pois a chuva começa quando $T=1$.
+
+\vspace*{0.3cm}
+Exemplo:
+\begin{small}
+\begin{verbatim}
+         Passo T=1           Passo T=2             Passo T=1000
+     -----------------   -----------------       ----------------- 
+     |   G        G  |   |        G      |       |               |
+     |       G       |   |   G        G  |       |  G            |
+     |               |   |       G       |       |               |
+     |     G   G     |   |               |  ...  |         G     |
+     |               |   |     G   G     |       |   G        G  |
+     |               |   |               |       |       G       |
+     |               |   |  G            |       |               |
+     +++++++++++++++++   +++++++++++++++++       +++++++++++++++++
+\end{verbatim}
+\end{small}
+
+Faça um programa em  que:
+
+\begin {enumerate}
+\item 
+Leia o número de linhas ($L$) e o número de colunas ($C$) da
+matriz $M$, a quantidade de novas gotas a serem criadas a cada
+iteração ($NG$), e o número de iterações ($TMAX$) do programa.
+
+Exemplo de entrada para a matriz acima:
+\begin{small}
+\begin{verbatim}
+    7 15 5 1000
+\end{verbatim}
+\end{small}
+
+\item 
+A cada unidade de tempo $T$, insira $NG$ novas gotas na matriz. A posição de 
+uma nova gota é dada por um procedimento cujo protótipo é:
+\begin{verbatim}
+    Procedure coordenada_nova_gota(L,C:integer; VAR x,y:integer);
+\end{verbatim}
+Este procedimento 
+recebe quatro parâmetros: os dois primeiros indicam o número de linhas e 
+colunas da matriz $M$ ($L,C$). Os dois últimos retornam as coordenadas 
+($x,y$) da nova gota na matriz.
+
+\item
+A cada unidade de tempo $T$, imprima o conteúdo da matriz $M$,
+atualizando a posição das gotas $G$ seguindo os seguintes critérios:
+
+        \begin{enumerate}
+        \item
+        Quando uma gota cai sobre outra, forme-se uma gota ``dupla'', ou seja, ela desce
+        duas posições a cada instante $T$. Caso uma nova gota caia sobre uma gota
+        ``dupla'', surge uma gota ``tripla'', que desce três posições a cada instante
+        $T$, e assim por diante. 
+        
+        \item
+        As gotas mais rápidas podem encontrar gotas mais lentas pelo caminho, neste caso
+        a velocidade delas é somada.
+        \end{enumerate}
+
+\end{enumerate}
+
+
+
+\item Considere o tipo PGM para imagens como definido na seção~\ref{pgm}.
+Faça um programa que leia da entrada padrão 
+(teclado) duas imagens no formato PGM: imagem original ($imgO$) e a imagem 
+do padrão ($imgP$).
+ 
+Em seguida, o programa deve procurar se a imagem $imgP$ está contida na 
+imagem $imgO$ e imprimir na tela as coordenadas $(coluna,linha)$ do canto 
+superior esquerdo de \textbf{cada ocorrência} da imagem $imgP$ encontrada na 
+imagem $imgO$.
+
+Observações:
+\begin{itemize}
+    \item A imagem $imgP$ pode aparecer mais de uma vez na imagem $imgO$;
+    \item Na imagem $imgP$, pontos com o valor $-1$ devem ser ignorados, isto é, represent
+am pontos transparentes da imagem e não devem ser comparados com a imagem $imgO$.
+    \item Estruture seu código. A solução parcial ou a indicação de chamadas a funções não
+ implementadas serão consideradas.
+\end{itemize}
+
+Exemplo:
+\begin{itemize}
+\vspace*{-2mm}      
+    \item \textbf{Imagem original}:
+    \begin{verbatim}
+    P2
+    11 10
+    40
+    40 5  5  5  5  5  5  5  5  40 0 
+    5  20 20 5  5  5  5  5  5  5  5
+    5  5  20 5  5  5  0  0  0  0  0
+    5  5  20 20 5  5  20 20 0  0  5
+    5  5  5  5  5  5  0  20 0  0  0
+    5  5  5  5  5  5  0  20 20 0  5
+    5  5  5  5  11 11 11 0  0  0  0
+    5  5  5  5  20 20 11 5  5  5  5
+    5  5  5  5  11 20 11 5  5  5  0
+    40 5  5  5  11 20 20 5  5  40 5
+    \end{verbatim}
+
+\vspace*{-4mm}      
+    \item \textbf{Imagem do padrão}:
+    \begin{verbatim}
+    P2
+    3 3
+    20
+    20 20 -1
+    -1 20 -1
+    -1 20 20
+    \end{verbatim}
+    
+\vspace*{-4mm}      
+    \item \textbf{Resultado do Programa}:
+    \begin{verbatim}
+    2 2
+    7 4
+    5 8   
+    \end{verbatim}    
+\end{itemize}
+
+\item Modifique o programa anterior de forma que, ao invés de imprimir as 
+coordenadas, seja impressa uma nova imagem, que consiste de uma cópia da 
+imagem original $imgO$ na qual as ocorrências da imagem $imgP$ estejam 
+circunscritas por uma borda de um ponto de largura, com o valor máximo da 
+imagem $imgO$ (3ª linha do arquivo PGM). Você não precisa se preocupar com 
+possíveis sobreposições das bordas.
+
+Exemplo da nova saída para a entrada original:
+\begin{itemize}
+\vspace*{-2mm}      
+    \item \textbf{Imagem resultante}:
+    \begin{verbatim}
+    P2
+    11 10
+    40
+    40 40 40 40 40 5  5  5  5  40 0
+    40 20 20 5  40 5  5  5  5  5  5
+    40 5  20 5  40 40 40 40 40 40 0
+    40 5  20 20 40 40 20 20 0  40 5
+    40 40 40 40 40 40 0  20 0  40 0
+    5  5  5  5  5  40 0  20 20 40 5
+    5  5  5  40 40 40 40 40 40 40 0
+    5  5  5  40 20 20 11 40 5  5  5
+    5  5  5  40 11 20 11 40 5  5  0
+    40 5  5  40 11 20 20 40 5  40 5
+    \end{verbatim}
+\end{itemize}
+
+\item Uma matriz é chamada de \textit{esparsa} quando 
+possui uma grande quantidade de elementos que valem zero. Por exemplo,
+a matriz de ordem $5 \times 4$ seguinte é esparsa, pois contém somente
+4 elementos não nulos.
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c|} 
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{
+3} & \multicolumn{1}{c}{4} \\ \cline{2-5}
+1 & 0  & 17 & 0   & 0 \\ \cline{2-5}
+2 & 0  & 0  & 0   & 0 \\ \cline{2-5}
+3 & 13 & 0  & -12 & 0 \\ \cline{2-5}
+4 & 0  & 0  & 25  & 0 \\ \cline{2-5}
+5 & 0  & 0  & 0   & 0 \\ \cline{2-5}
+\end{tabular}
+\end{center}
+
+Obviamente, a representação computacional padrão para matrizes é
+ineficiente em termos de memória, pois gasta-se um espaço inútil para
+se representar muitos elementos nulos. 
+
+Nesta questão, vamos usar uma representação alternativa que vai permitir
+uma boa economia de memória. 
+
+A proposta é representar somente os elementos não nulos. Para isto usaremos
+três vetores, dois deles ($L$ e $C$) 
+para guardar as coordenadas dos elementos não nulos
+e o terceiro (D) para guardar os valores dos elementos daquelas coordenadas. 
+Também
+usaremos três variáveis para representar o número de linhas e colunas
+da matriz completa e o número de elementos não nulos da matriz.
+
+Considere as seguintes definições de tipos:
+\begin{lstlisting}
+CONST
+     MAX = 6;      (* um valor bem menor que 5 x 4, dimensao da matriz *) 
+TYPE 
+     vetor_coordenadas = array [1..MAX] of integer;  (* coordenadas    *)
+     vetor_elementos   = array [1..MAX] of real;     (* dados          *)
+VAR
+     L, C: vetor_coordenadas; (* L: linhas, C: colunas                 *)
+     D: vetor_elementos;      (* D: dados                              *)
+     N_lin, N_col: integer;   (* para armazenar as dimensoes da matriz *)
+     N_elementos: integer     (* numero de elementos nao nulos         *)
+\end{lstlisting}
+
+
+\newtheorem{definicao}{Definição}
+
+\begin{definicao}
+\label{def1}
+Um elemento M[i,j] da matriz completa pode ser 
+obtido da representação compactada: 
+
+\begin{itemize}
+\item se existe um k tal que L[k] = i e C[k] = j, então M[i,j] = D[k];
+\item caso contrário, M[i,j] = 0.
+\end{itemize} 
+\end{definicao}
+
+A matriz do exemplo anterior pode então ser assim representada:
+
+\begin{verbatim}
+N_elementos:= 4; N_lin:= 5; N_col:= 4;
+\end{verbatim}
+
+\begin{center}
+\begin{tabular}{c|p{.6cm}|p{.6cm}|p{.6cm}|p{.6cm}|p{.6cm}|p{.6cm}|} 
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{
+3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6}\\ \cline{2-7}
+L & 1  & 3  & 3   & 4 & & \\ \cline{2-7}
+\end{tabular}
+
+
+\begin{tabular}{c|p{.6cm}|p{.6cm}|p{.6cm}|p{.6cm}|p{.6cm}|p{.6cm}|} 
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} 
+& \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{}\\ \cline{2-7}
+C & 2  & 1  & 3   & 3 & & \\ \cline{2-7}
+\end{tabular}
+
+\begin{tabular}{c|p{.6cm}|p{.6cm}|p{.6cm}|p{.6cm}|p{.6cm}|p{.6cm}|} 
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} 
+& \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{}\\ \cline{2-7}
+D & 17  & 13  & -12   & 25 & & \\ \cline{2-7}
+\end{tabular}
+\end{center}
+
+\begin {enumerate}
+
+
+\item Fazer um procedimento que leia da entrada padrão: 
+\begin{itemize}
+\item dois inteiros, representando as dimensões da matriz (linha, coluna);
+\item trincas de elementos l, c, d, onde l e c são inteiros e d é real,
+representando respectivamente a linha, a coluna
+e o valor de um elemento não nulo da matriz. A leitura termina quando for
+lido uma trinca 0, 0, 0. Para cada trinca, devem ser criados os três
+vetores que representam a matriz conforme descrito acima. Veja o exemplo
+de entrada de dados, abaixo.
+\end{itemize}
+
+Exemplo para a entrada de dados:
+
+\begin{verbatim}
+5 4
+1 2 17
+3 1 13
+3 3 -12
+4 3 25
+0 0 0 
+\end{verbatim}
+
+
+\item Fazer uma função que, dada uma coordenada (l, c), respectivamente
+para uma linha e coluna,
+retorne o valor de elemento M[l,c], conforme a definição \ref{def1}.
+
+\item Fazer um procedimento que,  dadas duas matrizes no formato compactado
+descrito acima, obtenha uma terceira matriz compactada que é a soma
+das duas primeiras. 
+
+\item Fazer um procedimento que, dada uma matriz no formato compactado,
+imprima na tela uma matriz no formato padrão, contendo os zeros.
+
+%\item Fazer uma função que testa se uma entrada dada conforme o item 1
+%acima corresponde de fato a uma matriz esparsa. Considere que a matriz
+%é esparsa se no máximo 15\% dos elementos forem não nulos.
+\end{enumerate}
+
+
+
+
+\item Declare uma matriz $M \times N$ de caracteres do
+  tipo \textsf{char}.  Implemente quatro funções que, dados como
+  parâmetros a matriz, uma palavra do tipo \textsf{string} e um par de
+  coordenadas na matriz, isto é, dois inteiros representando uma linha e
+  uma coluna,  descubram se,  na matriz, a  palavra ocorre  iniciando na
+  posição indicada pelas coordenadas. 
+A primeira função procura na horizontal, da esquerda para direita;
+a segunda função procura na horizontal, da direita para esquerda;
+a terceira função procura na vertical, da cima para baixo;
+a quarta função procura na vertical, da baixo para cima.
+
+
+
+
+\item Os incas construiam pirâmides de base quadrada em
+que a única forma de se atingir o topo era seguir em espiral pela
+borda, que acabava formando uma escada em espiral.  Escreva um
+programa que leia do teclado uma matriz quadrada $N \times N$ de
+números inteiros e verifica se a matriz é inca; ou seja, se partindo
+do canto superior esquerdo da matriz, no sentido horário, em espiral,
+a posição seguinte na ordem é o inteiro consecutivo da posição
+anterior.  Por exemplo, as matrizes abaixo são incas:
+
+\begin{verbatim}
+   1   2   3   4        1   2   3   4   5
+  12  13  14   5       16  17  18  19   6        
+  11  16  15   6       15  24  25  20   7
+  10   9   8   7       14  23  22  21   8
+                       13  12  11  10   9
+\end{verbatim}
+
+O programa deve ler do teclado a dimensão da matriz 
+(um inteiro $N$, $1 \leq N \leq 100$) e em cada uma das próximas $N$ linhas, 
+os inteiros correspondentes às  entradas da matriz naquela linha.  
+A saída do programa deve ser
+``A matriz eh inca'' ou ``A matriz nao eh inca''.
+
+\item Escreva um programa em \emph{Pascal} que leia do teclado uma matriz A 
+($N \times M$)
+de inteiros e imprima uma segunda matriz $B$ de mesma dimensões em que
+cada elemento $B[i,j]$ seja constituído pela soma de todos os 8 elementos
+vizinhos do elemento $A[i,j]$, excetuando-se o próprio $A[i,j]$.
+
+
+\item Nesta questão você terá que providenciar ligações par-a-par 
+entre diversos pontos distribuídos ao longo de uma rota qualquer.
+A entrada de dados consiste de um conjunto de pares $(x,y), 1\leq x,y \leq
+MAX$, sendo
+que o último par a ser lido é o (0,0), que não deve ser processado.
+
+Para cada par $(x,y)$ dado como entrada, você deve providenciar uma
+conexão física entre eles. 
+As linhas de uma matriz podem representar a ``altura'' das
+linhas de conexão, enquanto que as colunas da matriz podem representar
+os pontos $(x,y)$ sendo conectados. Um símbolo de ``\verb#+#'' pode ser 
+usado para se representar alteração na direção de uma conexão. 
+O símbolo ``\verb#|#'' pode ser usado para representar um trecho de 
+conexão na vertical. Finalmente o símbolo ``\verb#-#'' pode ser usado
+para se representar um trecho de conexão na direção horizontal.
+Quando um cruzamento de linhas for inevitável, deve-se usar o
+símbolo ``\verb#x#'' para representá-lo. Considere que não existem trechos 
+de conexões na diagonal.
+
+Por exemplo, suponha que a entrada é dada pelos seguintes pares:
+
+\begin{verbatim}
+3 5
+2 9
+0 0
+\end{verbatim}
+
+Uma possível saída para seu programa seria a impressão da seguinte
+matriz:
+
+\begin{verbatim}
+4
+3         
+2  +-------------+
+1  | +---+       |
+ 1 2 3 4 5 6 7 8 9
+\end{verbatim}
+
+Outra possível matriz solução para este problema seria esta:
+\begin{verbatim}
+4
+3         
+2    +---+  
+1  +-x---x-------+
+ 1 2 3 4 5 6 7 8 9
+\end{verbatim}
+
+Note que nesta última versão foi preciso inserir dois cruzamentos.
+
+Ainda como exemplo, se o par (6,8) também fosse dado como entrada no 
+exemplo anterior, a saída do programa poderia ser assim exibida:
+
+\begin{verbatim}
+4
+3          +---+ 
+2  +-------x---x-+
+1  | +---+ |   | |
+ 1 2 3 4 5 6 7 8 9
+\end{verbatim}
+
+Você deve implementar um programa em \emph{Pascal} que seja
+capaz de ler uma sequência de pares terminada em $(0,0)$ (como no
+exemplo acima) e que imprima o desenho das conexões como saída,
+também conforme o diagrama acima. 
+
+
+\item 
+Modifique o programa anterior com o objetivo de minizar o número de cruzamentos
+da matriz gerada como solução do problema anterior. Assim,
+a matriz ideal para ser dada como resposta do último exemplo
+seria a seguinte:
+
+\begin{verbatim}
+4
+3           
+2  +-------------+
+1  | +---+ +---+ |
+ 1 2 3 4 5 6 7 8 9
+\end{verbatim}
+
+\item Considere o seguinte programa:
+
+\begin{lstlisting}
+program prova_final;
+
+CONST MAX=100;
+TYPE matriz = array [1..MAX,1..MAX] of integer;
+VAR n_lin, n_col: integer; (* dimensoes da matriz *)
+    m: matriz;             (* matriz *)
+
+(* espaco reservado para os procedimentos *)
+
+begin
+   read (n_lin, n_col);
+   le_matriz (m, n_lin, n_col);
+   acha_maior_sequencia (m, n_lin, n_col, l_ini, c_ini, l_fim, c_fim);
+   writeln ('A maior sequencia de numeros repetidos na matriz ');
+   writeln ('inicia na coordenada ', l_ini, c_ini);
+   writeln (' e termina na coordenada ', l_fim, c_fim);
+end.
+\end{lstlisting}
+
+
+Implemente os procedimentos indicados para 
+que o programa leia uma matriz de inteiros e imprima as coordenadas
+de início e término da maior sequência de números repetidos da matriz.
+Esta sequência pode estar tanto nas linhas quanto nas colunas. No caso
+de existir mais de uma sequência repetida de mesmo tamanho, você pode
+imprimir as coordenadas de qualquer uma delas, desde que imprima as de uma só.
+
+\begin{minipage}{7cm}
+\begin{verbatim}
+Exemplo 1:
+Entrada:      Saída
+4 3           1 2 
+1 2 3         3 2
+2 2 1
+3 2 5
+\end{verbatim}
+\end{minipage} \  
+\begin{minipage}{7cm}
+\begin{verbatim}
+Exemplo 2:
+Entrada:      Saída
+4 5           2 2
+1 2 3 1 2     2 4
+1 2 2 2 3
+2 3 4 5 6
+8 7 6 4 2
+\end{verbatim}
+\end{minipage}
+
+
+
+\item Faça um programa para:
+\begin{itemize}
+    \item ler uma sequência de polinômios 
+    $P_i(x)=a_{i_0} + a_{i_1}x + a_{i_2}x^2 + ... + a_{i_n}x^n, i=1,2,...,k$; 
+
+    \item A leitura deve considerar que cada linha de entrada    
+    contém um polinômio $P_i$. A primeira informação é o seu 
+    respectivo grau ($n_i$). As outras informações são os
+    $n_i$ coeficientes ($a_{i_0}, a_{i_1}, ..., a_{i_n}$);
+    
+    Exemplo:
+    
+    $P(x) = 8.1 -3.4x + x^2  \Longrightarrow $ \verb|2  8.1  -3.4  1.0|
+    
+    \item A sequência de polinômios se encerra quando for fornecido um 
+    polinômio de grau zero; 
+    
+    \item Após a leitura de todos os polinômios, o programa deve ler uma 
+    sequência de números reais $x$. Para cada número real lido, o programa 
+    deve imprimir o resultado de $P_i(x)$, para todos os polinômios lidos 
+    anteriormente ($i=1,2,...,k$);
+    
+    \item A sequência de números reais se encerra quando for lido o número 
+    $0.0$, para o qual não se deve calcular os valores de $P_i(x)$.
+\end{itemize}    
+    
+Exemplo:
+\begin{verbatim}
+Entrada:
+2  -1.0 0.0 1.0
+3  1.0  2.0  0.0  -1.0
+0
+4.5
+1.0
+0.0
+
+Saída:
+P_1(2.0) = 3.0
+P_2(2.0) = -3.0
+P_1(1.0) = 0.0
+P_2(1.0) = 2.0
+\end{verbatim}
+
+
+\item Faça um programa para:
+
+\begin{itemize}
+\item ler um inteiro $N$ e uma matriz quadrada de ordem $N$ contendo apenas
+      0's e 1's.
+\item encontrar a maior submatriz quadrada da matriz de entrada
+      que contém apenas 1's.
+\item imprimir as coordenadas dos cantos superior esquerdo e
+      inferior direito da submatriz encontrada no item anterior. Havendo mais 
+      de uma submatriz máxima, imprimir as coordenadas de qualquer uma delas.
+\end{itemize}
+
+
+\noindent Exemplo: Considere a seguinte matriz quadrada de 
+ordem 6:
+
+\vspace*{\baselineskip}
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c|c|}
+\multicolumn{1}{c}{}  & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6} \\ \cline{2-7}
+1 & 0 & 1 & 0 & 1 & 1 & 1 \\ \cline{2-7}
+2 & 0 & 1 & 1 & 1 & 1 & 0 \\ \cline{2-7}
+3 & 0 & 1 & 1 & 1 & 0 & 1 \\ \cline{2-7}
+4 & 1 & 1 & 1 & 1 & 0 & 1 \\ \cline{2-7}
+5 & 0 & 0 & 1 & 0 & 1 & 0 \\ \cline{2-7}
+6 & 0 & 1 & 0 & 1 & 0 & 1 \\ \cline{2-7}
+\end{tabular}
+\end{center}
+
+\vspace*{\baselineskip}
+
+A título de ilustração, esta matriz tem:
+
+\begin{itemize}
+\item 22 submatrizes quadradas de ordem 1 que contém apenas 1's;
+\item 5 submatrizes quadradas de ordem 2 que contém apenas 1's. Por exemplo, 
+      para duas delas: uma é dada pelas coordenadas (1,4) e (2,5) e outra 
+      pelas coordenadas (2,2) e (3,3);
+\item 1 submatriz quadrada de ordem 3 que contém apenas 1's, as coordenadas são (2,2) e (4,4).
+\end{itemize}
+
+Como a maior submatriz quadrada que contém apenas 1's é a de ordem 3,
+então a saída do programa deve imprimir, para este exemplo, as coordenadas
+(2,2) e (4,4).
+
+
+
+\item Escreva um programa que, dado um tabuleiro e uma lista de sub-partes 
+retangulares do tabuleiro, retorna o número de posições que não pertencem 
+a nenhuma sub-parte. Quando uma posição não pertence a nenhuma sub-parte
+dizemos que ela está \emph{perdida}.
+
+\vspace*{\baselineskip}
+
+\begin{center}
+\textbf{Entrada}
+\end{center}
+
+
+A entrada consiste de uma série de conjuntos de teste. 
+
+Um conjunto de teste começa com uma linha com três números $W$, $H$ e $N$, 
+indicando, respectivamente, a largura e a altura do tabuleiro 
+e o número de sub-partes deste. 
+%
+Estes valores satisfazem as seguintes restrições: 
+$1 \leq W$, $H \leq 500$ e $0 \leq N \leq 99$. 
+
+Seguem $N$ linhas, compostas de quatro inteiros 
+$X_1$, $Y_1$, $X_2$ e $Y_2$, 
+tais que $(X_1, Y_1)$ e $(X_2, Y_2)$ 
+são as posições de dois cantos opostos de uma sub-parte. 
+%
+Estes valores satisfazem as seguintes restrições: 
+$1 \leq X_1$, $X_2 \leq W$ e $1 \leq Y_1$, $Y_2 \leq H$. 
+
+O fim da entrada acontece quando $W=H=N=0$. 
+Esta última entrada não deve ser considerada como um conjunto de teste.
+
+\begin{center}
+\textbf{Saída}
+\end{center}
+
+O programa deve imprimir um resultado por linha, seguindo o formato 
+descrito no exemplo de saída.
+
+\begin{verbatim}
+Exemplo
+
+Entrada:
+1 1 1
+1 1 1 1                {fim do primeiro conjunto de testes}
+2 2 2
+1 1 1 2
+1 1 2 1                {fim do segundo conjunto de testes }
+493 182 3
+349 148 363 146
+241 123 443 147
+303 124 293 17         {fim do terceiro conjunto de testes}
+0 0 0                  {fim do conjunto de testes}
+
+Saída
+Não há posições perdidas. 
+Existe uma posição perdida.
+Existem 83470 posições perdidas.
+\end{verbatim}
+
+
+\end{enumerate}

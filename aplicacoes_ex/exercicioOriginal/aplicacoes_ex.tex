@@ -1,0 +1,242 @@
+\section{Exercícios}
+
+\begin{enumerate}
+
+\item Dado um número de três dígitos, construir outro número de quatro
+   dígitos com a seguinte regra: a) os três primeiros  dígitos,
+   contados da esquerda para a direita, são iguais aos do número dado;
+   b) o quarto dígito e' um dígito de controle calculado da seguinte forma:
+   primeiro dígito + 3*segundo dígito + 5*terceiro dígito; o dígito de
+   controle é igual ao resto da divisão dessa soma por 7.
+
+\item Dado um  número inteiro  de  cinco dígitos  representando um  número
+   binário, determinar seu valor equivalente em decimal. Por exemplo, se a
+   entrada for 10001, a saída deve ser 17.
+
+\item Considere o programa feito para resolução do cálculo do número neperiano
+      (seção~\ref{sec_neperiano}.
+     Quantas operações de multiplicação sao executadas no seu programa?
+\begin{enumerate}
+\item Considerando 20 termos.
+\item Considerando N termos.
+\end{enumerate}
+
+\item Considere a progressão geométrica 1, 2, 4, 8, 16, 32, ... e um inteiro 
+   positivo N. Imprimir os N primeiros termos desta PG e a soma deles.
+
+\item Imprimir os N primeiros termos das sequências definidas pelas relações
+   de recorrência:
+
+\begin{enumerate}
+\item $Y(k+1) = Y(k) + k, k = 1,2,3..., Y(1)=1$
+\item $Y(k+1) = Y(k) + (2k+1), k = 0,1,2,3..., Y(0)=1$
+\item $Y(k+1) = Y(k) + (3k^2 + 3k + 1), k = 0,1,2,3..., Y(0)=1$
+\item $Y(k+1) = 2Y(k), k = 1,2,3..., Y(1)=1$
+\end{enumerate}
+
+\item Dado um número  inteiro $N$,  tabelar $N[k]$  para $k$  variando de  1 até
+     $N$.  Considere  que,  por definição,  $X[k]=X(X-1)(X-2)(X-3)...(X-k+1)$,  
+     $X$
+     sendo um número  real, $k$ um natural diferente de  zero e $X[0]=1$. 
+     Observe que se $X=N=k$, então $N[N]=N!$. 
+
+\item Sabe-se  que o valor do coseno  de 1 (um) radiano  pode ser calculado
+    pela série infinita abaixo:
+
+
+\begin{center}
+\[
+coseno(x) = \frac{1}{0!} - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} 
+           + \ldots
+\]
+\end{center}
+
+    Fazer um  programa que calcule o  valor do cosseno de $x$ 
+    obtido  pela série acima considerando somente os primeiros 14  
+    termos da mesma.
+
+\item Considere o conjunto $C$ de todos os números inteiros com quatro algarismos
+distintos, ordenados segundo seus valores, em ordem crescente:
+\begin{displaymath}
+C = \{1023, 1024, 1025, 1026, 1027, 1028, 1029, 1032, 1034, 1035, \dots\}
+\end{displaymath}
+
+\vspace{-.2cm}
+Faça um programa em \emph{Pascal} que leia um número $N$, pertencente a este
+conjunto, e imprima a posição deste número no conjunto.
+
+Exemplos:
+
+\vspace{.1cm}
+\begin{minipage}{2in}
+\begin{itemize}
+\item
+Entrada: 1026\\
+Saída: 4
+\vspace{-.2cm}
+\item
+Entrada: 1034\\
+Saída: 9
+\end{itemize}
+\end{minipage}
+\begin{minipage}{2in}
+\begin{itemize}
+\item
+Entrada: 9876\\
+Saída: 4536
+\vspace{-.2cm}
+\item
+Entrada: 1243\\
+Saída: 72
+\end{itemize}
+\end{minipage}
+
+\item Faça um programa em \emph{Pascal} que calcule e imprima o valor de $f(x)$, onde $x\in\Re$ é lido no teclado e:
+\begin{equation*}
+ f(x) = \frac{5x}{2!} - \frac{6x^2}{3!} + \frac{11x^3}{4!} - \frac{12x^4}{5!} + \frac{17x^5}{6!} - \frac{18x^6}{7!} + \ldots
+\end{equation*}
+O cálculo deve parar quando $abs(f(x_{n+1})-f(x_n)) < 0.00000001$, onde $abs(x)$ é a função em \emph{Pascal} que retorna o valor absoluto de $x$.
+
+\item O número áureo $\varphi$ (1,6180339...) pode ser calculado através de
+expressões com séries de frações sucessivas do tipo:
+\begin{eqnarray*}
+   \varphi_1 &=& 1 + \frac{1}{1}\ =\ 2 \\
+   \varphi_2 &=& 1 + \frac{1}{1 + \frac{1}{1}}\ =\ 1,5 \\
+   \varphi_3 &=& 1 + \frac{1}{1 + \frac{1}{1 + \frac{1}{1}}}\ =\ 1,666 \\
+   \varphi_4 &=& 1 + \frac{1}{1 + \frac{1}
+                {1 + \frac{1}{1 + \frac{1}{1}}}}\ =\ 1,6
+\end{eqnarray*}
+onde $\varphi_i$ indica a aproximação do número áureo com $i$ frações
+sucessivas. Estes valores variam em torno do número áureo, sendo maior ou
+menor alternadamente, mas sempre se aproximando deste quando o número
+de frações cresce.
+
+Faça um programa em \emph{Pascal} que leia um número $N$ e imprima o
+valor da aproximação do número áureo $\varphi_N$, que usa uma série de
+$N$ frações sucessivas.
+
+\item Dado um inteiro positivo $N$ e dada uma sequência de $N$ números reais $x_1, \ldots, x_n$
+faça um programa em \emph{Pascal} que calcule o quociente da soma dos reais pelo seu produto. Isto é:
+
+\[
+q=\frac{\sum_{i=1}^{N}{x_i}}{\prod_{i=1}^{N}x_i}
+\]
+
+Como não pode haver divisão por zero, seu programa deve parar tão logo esta situação seja
+verificada indicando uma mensagem apropriada para o usuário.
+
+\item Em \emph{Pascal} o tipo \textit{CHAR} é enumerável, e portanto está na classe dos tipos
+chamados de \textit{ordinais}, conforme o guia de referência da linguagem estudado em
+aula. A ordem de cada caracter é dada pela tabela ASCII. Assim é possível, por exemplo, escrever
+trechos de códico tais como:
+
+\vspace*{\baselineskip}
+
+\begin{center}
+\begin{minipage}{8cm}
+\begin{verbatim}
+IF 'A' > 'B' THEN
+     WRITE ('A eh maior que B')
+ELSE
+     WRITE ('A não eh maior que B');
+\end{verbatim}
+\end{minipage}
+\end{center}
+
+\vspace*{\baselineskip}
+
+\noindent que  produziria a mensagem ``A não eh maior que B'',
+pois na tabela ASCII o símbolo ``A'' tem ordem 64 enquanto que ``B'' tem ordem 65.
+
+Ou ainda:
+
+\vspace*{\baselineskip}
+
+\begin{center}
+\begin{minipage}{8cm}
+\begin{verbatim}
+FOR i:= 'a' TO 'z' DO
+     WRITE (i);
+\end{verbatim}
+\end{minipage}
+\end{center}
+
+\vspace*{\baselineskip}
+
+\noindent que produziria como saída ``abcdefghijklmnopqrstuvxwyz''.
+
+Faça um programa em \emph{Pascal} que leia seu nome completo (nomes completos em geral) constituídos
+por apenas letras maiúsculas entre ``A'' e ``Z'' e espaços em branco terminadas em ``.'' e que
+retorne o número de vogais e consoantes neste nome. Exemplos:
+
+\vspace*{\baselineskip}
+
+\begin{minipage}{8cm}
+\begin{verbatim}
+Entrada: FABIANO SILVA.
+Saída: 
+     Vogais: 6
+     Consoantes: 6
+
+Entrada: MARCOS ALEXANDRE CASTILHO.
+Saída: 
+     Vogais: 9
+     Consoantes: 14
+
+\end{verbatim}
+\end{minipage}
+
+\item Faça um  programa em \emph{Pascal} que leia um inteiro positivo $n$, e escreva
+a soma dos $n$ primeiros termos da série:
+
+\[ \frac{1000}{1} - \frac{997}{2} + \frac{994}{3} - \frac{991}{4} + \ldots\]
+
+\item Dizemos que uma sequência de inteiros é {\bf $k$-alternante} se for
+composta alternadamente por segmentos de números pares de tamanho $k$ e
+segmentos de números ímpares de tamanho $k$.
+
+Exemplos:
+
+\noindent
+A sequência 1 3 6 8 9 11 2 4 1 7 6 8 é 2-alternante. \\
+A sequência 2 1 4 7 8 9 12 é 1-alternante.  \\
+A sequência 1 3 5 é 3-alternante.
+
+Escreva um programa \emph{Pascal} que verifica se uma sequência de tamanho $n$ é
+10-alternante.  O programa deve ler $n$, o tamanho da sequência, no inicío do
+programa e aceitar somente valores  múltiplos de 10.
+A saída do programa deve ser a mensagem  ``{\tt A sequencia eh
+10-alternante}'' caso a sequência seja 10-alternante e ``{\tt A sequencia
+nao eh 10-alternante}'', caso contrário.
+
+
+\item Faça um  programa em \emph{Pascal} que calcule
+ o resultado da seguinte série:
+
+\[
+S = \frac{x^0}{2!} - \frac{x^4}{6!} + \frac{x^8}{10!} - \frac{x^{12}}{14!} + \frac{x^{16}}{18!} - \ldots
+\]
+
+
+\item Faça um programa em \emph{Pascal} que
+receba como entrada um dado
+inteiro $N$ e o imprima como um produto de primos. Exemplos:
+$45 = 3 \times 3 \times 5$. $56 = 2 \times 2 \times 2 \times 7$.
+
+\item Faça um programa em \emph{Pascal} que calcule e escreva o
+ valor de $S$ assim definido:
+
+ \[ 
+        S = \frac {1}{1!} - \frac {2}{2!} + \frac {4}{3!}  - \frac
+        {8}{2!} + \frac {16}{1!} - \frac {32}{2!} + \frac {64}{3!} -
+        \cdots 
+ \]
+
+\item Fazer  um  programa em  \emph{Pascal}  que calcule e escreva o valor de S:
+\[
+    S = \frac {37 \times 38}{1} + \frac {36 \times 37}{2} + \frac {35 \times 36}{3} + 
+        \cdots + \frac{1 \times 2}{37}
+\]
+
+
+\end{enumerate}

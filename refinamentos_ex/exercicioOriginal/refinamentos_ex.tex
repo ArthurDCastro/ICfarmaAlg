@@ -1,0 +1,121 @@
+\section{Exercícios}
+
+
+\begin{enumerate}
+
+\item Fazer um programa em \emph{Pascal} que leia do teclado dois números inteiros positivos e que imprima na saída um único número inteiro
+que é a soma dos dois primeiros. Entretanto, seu programa não pode utilizar o operador de soma (+) da linguagem \emph{Pascal} para somar os dois inteiros lidos em uma única operação. Outrossim, o programa deve implementar a soma dos números dígito a dígito, iniciando pelo menos significativo até o mais significativo, considerando o ``vai um'', conforme costumamos
+fazer manualmente desde o ensino fundamental.
+
+\begin{verbatim}
+Exemplo 1                    Exemplo 2
+ 11   ("vai um")              1111   ("vai um")
+40912 (primeiro número)        52986 (primeiro número)
+ 1093 (segundo número)       1058021 (segundo número)
+-----                        -------
+42005 (soma)                 1111007 (soma)
+\end{verbatim}
+
+\item Um agricultor possui 1 (uma) espiga de milho. Cada espiga tem 150 grãos,
+e cada grão pesa 1g (um grama). Escreva um programa em \emph{Pascal} para
+determinar quantos anos serão necessários para que o agricultor colha
+mais de cem toneladas de milho (1T = 1000Kg, 1Kg = 1000g), sendo que:
+
+\begin{itemize}
+\item A cada ano ele planta todos os grãos da colheita anterior
+\item Há uma única colheita por ano
+\item 10\% (dez por cento) dos grãos não germina (morre sem produzir)
+\item Cada grão que germina produz duas espigas de milho
+\end{itemize}
+
+Assuma que a quantidade de terra disponível é sempre suficiente para o
+plantio.
+
+\item Modifique a questão anterior acrescentando na simulação os seguintes fatos:
+
+\begin{itemize}
+\item  Há 8 (oito) CASAIS de pombas (16 pombas) que moram na propriedade
+       do agricultor.
+\item Cada pomba come 30 grãos por dia, durante os 30 dias do ano em que
+as espigas estão formadas antes da colheita;
+\item A cada ano, cada casal gera 2 novos casais (4 pombas), que se
+alimentarão e reproduzirão no ano seguinte;
+\item Uma pomba vive tres anos;
+\end{itemize}
+
+Ao final do programa, imprima também o número de pombas que vivem na
+propriedade quando o agricultor colher mais de 100T de milho
+
+\item Considere um número inteiro com 9 dígitos. Suponha que o  último dígito seja o ``dígito verificador''
+ do número formado pelos 8 primeiros. Faça um programa em \emph{Pascal} que leia uma massa de dados terminada por 0 (zero) e que
+imprima os números que não são bem formados, isto é, aqueles que não satisfazem o dígito
+verificador. Implemente o seguinte algoritmo para gerar o dígito verificador:
+
+Conforme o esquema abaixo, cada dígito do número, começando da direita para a esquerda
+(menos significativo para o mais significativo) é multiplicado, na ordem, por 2, depois 1,
+depois 2, depois 1 e assim sucessivamente.
+
+Número exemplo: 261533-4
+
+\begin{center}
+\begin{small}
+\begin{verbatim}
+
+  +---+---+---+---+---+---+   +---+
+  | 2 | 6 | 1 | 5 | 3 | 3 | - | 4 |
+  +---+---+---+---+---+---+   +---+
+    |   |   |   |   |   |
+   x1  x2  x1  x2  x1  x2
+    |   |   |   |   |   |
+   =2 =12  =1 =10  =3  =6
+    +---+---+---+---+---+-> = (16 / 10) = 1, resto 6 => DV = (10 - 6) = 4 
+
+\end{verbatim}
+\end{small}
+\end{center}
+
+Ao invés de ser feita a somatória das multiplicações, será feita a somatória dos dígitos das multiplicações
+(se uma multiplicação der 12, por exemplo, será somado 1 + 2 = 3).
+
+A somatória será dividida por 10 e se o resto (módulo 10) for diferente de zero, o dígito será 10 menos este valor.
+
+\item 
+Escreva um programa \emph{Pascal} que leia dois valores inteiros positivos A e B.
+Se A for igual a B, devem ser lidos novos valores até que sejam informados
+valores distintos.  Se A for menor que B, o programa deve calcular e
+escrever a soma dos números ímpares existentes entre A(inclusive) e
+B(inclusive).  Se A for maior que B, o programa deve calcular e escrever a
+média aritmética dos múltiplos de 3 existentes entre A(inclusive) e
+B(inclusive).
+
+
+\item 
+Faça um  programa em \emph{Pascal} que dado
+ uma sequência de números inteiros  terminada por zero (0), determinar
+ quantos segmentos    de  números iguais consecutivos     compõem essa
+ sequência.
+
+Ex.: A sequência 2,2,3,3,5,1,1,1 é  formada por 4 segmentos de números
+iguais.
+
+
+\item Faça um programa em \emph{Pascal} que imprima a seguinte
+sequência de números: 1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 
+7, 7, 7, 7, 7, 8, 8, 8, 8, 8, \ldots
+
+\item Faça um programa em \emph{Pascal} que 
+receba como entrada um dado 
+inteiro $N$ e o imprima como um produto de primos. Exemplos:
+$45 = 3 \times 3 \times 5$. $56 = 2 \times 2 \times 2 \times 7$.
+
+\item Faça um programa em \emph{Pascal} que, dado
+um número inteiro $N$, escreva o maior divisor de $N$ que é uma potência
+de um dos números primos fatorados. Ex:
+
+\hspace{2cm} $N=45 = 3^2.5^1 $ escreve $9=3^2$
+
+\hspace{2cm} $N=145 = 5^2.7^1 $ escreve $25=5^2$
+
+\hspace{2cm} $N=5616 = 2^4.3^3.13 $ escreve $27=3^3$
+
+\end{enumerate}

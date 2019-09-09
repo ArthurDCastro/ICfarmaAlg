@@ -1,0 +1,97 @@
+\section{Exercícios}
+
+\begin{enumerate}
+
+\item Defina um Tipo Abstrato de Dados \emph{racional} que vai procurar
+      abstrair números da forma $\frac{A}{B}$, onde $A$ e$B$ são
+      números inteiros. Em seguida implemente as funções e procedimentos
+      necessários para realizar as operações abaixo de maneira que os
+      resultados sejam sempre simplificados, isto é, o resultado final
+      deve indicar $\frac{3}{2}$ e não $\frac{6}{4}$, por exemplo. 
+      Suas implementações não podem permitir que ocorram divisões por zero.
+      \begin{enumerate}
+          \item adição de duas frações;
+          \item subtração de duas frações;
+          \item multiplicação de duas frações;
+          \item divisão de duas frações.
+      \end{enumerate}
+
+\item Sem olhar os códigos escritos neste capítulo, implemente sua 
+      própria biblioteca que implementa o TAD pilha. Os algoritmos
+      que estão ali são triviais mas servem para ver sua prática em 
+      programação.
+
+\item Sem olhar os códigos escritos neste capítulo, implemente sua 
+      própria biblioteca que implementa o TAD conjunto. Alguns dos algoritmos
+      que estão ali \emph{não} são triviais e é um ótimo exercício de 
+      programação.
+
+\item Resolva o exercício que está na seguinte URL: \\
+\url{http://www.inf.ufpr.br/cursos/ci055/tad_conjunto/enunciado_tad.pdf}
+
+\item Resolva o exercício que está na seguinte URL: \\
+\url{http://www.inf.ufpr.br/cursos/ci055/Provas_antigas/final-20191.pdf}
+
+\item Resolva o exercício que está na seguinte URL: \\
+\url{http://www.inf.ufpr.br/cursos/ci055/Provas_antigas/p3-20191.pdf}
+
+\item Considere um Tipo Abstrato de Dados \emph{Fila}, que define
+uma estrutura na qual o primeiro que entra é o primeiro que sai
+(FIFO, do inglês \emph{First In, First Out}). Pense em uma fila
+de uma padaria, por exemplo. As principais operações que manipulam
+filas são as seguintes:
+
+\begin{itemize}
+   \item criar uma fila (vazia);
+   \item inserir elementos;
+   \item remover elementos;
+   \item retornar o tamanho da fila;
+   \item saber se a fila está vazia/cheia;
+   \item imprimir a fila como está;
+   \item retornar o elemento do início da fila, removendo-o;
+   \item retornar o elemento do início da fila, sem removê-lo.
+\end{itemize}
+
+\item Considere um Tipo Abstrato de Dados \emph{lista}, que define
+uma estrutura que pode conter elementos em qualquer ordem ou mesmo
+repetidos. Pense por exemplo em uma lista de compras ou de afazeres.
+As principais operações que manipulam listas são as seguintes:
+\begin{itemize}
+   \item criar uma lista (vazia);
+   \item inserir no início;
+   \item inserir no fim;
+   \item inserir na posição p;
+   \item remover (do início, do fim, da posição p);
+   \item retornar o tamanho da lista;
+   \item saber se a lista está vazia/cheia;
+   \item imprimir a lista como está;
+   \item imprimir a lista ordenada;
+   \item fundir duas listas;
+   \item intercalar duas listas;
+   \item pesquisar o elemento da posição p na lista;
+   \item copiar uma lista em outra;
+\end{itemize}
+
+\item Implemente um programa que encontra bilhetes premiados do jogo da mega-sena, usando a sua implementação do tipo lista acima definido.
+
+\item Defina o Tipo Abstrato de Dados \textsf{polinomio}. A estrutura tem
+que ser capaz de armazenar o grau e os coeficientes de um polinômio
+$a_0 + a_1x + a_2x^2 + \ldots + a_nx^n$. Implemente o conjunto de
+operações abaixo na forma de funções e procedimentos:
+
+\begin{enumerate}
+\item inicializar a estrutura polinômio;
+\item ler um polinômio de grau $n$;
+\item dado $x \in R$, calcular o valor de $P(x)$;
+\item obter o polinômio derivada de $P$, $P'$.
+\item dado $x \in R$, calcular o valor de $P'(x)$;
+\item obter o polinômio soma de $P$ e $Q$;
+\item obter o polinômio multiplicação de $P$ e $Q$;
+\end{enumerate}
+
+Faça um programa em \emph{Pascal} que utilize o tipo abstrato de dados
+definido, leia dois polinômios $p$ e $q$, calcule
+o produto $r$ de $p$ e $q$, imprima o polinômio resultante, 
+leia um certo número real $x$, calcule o valor de $r(x)$ e o imprima. 
+
+\end{enumerate}

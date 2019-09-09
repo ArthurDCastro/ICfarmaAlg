@@ -1,0 +1,1015 @@
+\subsection{Exercícios}
+
+\begin{enumerate}
+
+\item Faça  um programa que leia e  armazene em um vetor  uma sequência de
+inteiros.  Em seguida  o programa  deve  ler uma  sequência de  inteiros
+informados pelo usuário e, para cada  um deles, dizer se ele pertence ou
+não ao vetor armazenado previamente. 
+
+\item Faça um  programa que  leia duas  sequências de  $n$ inteiros  em dois
+vetores distintos,  digamos, $v$ e  $w$ e verifique  se os dois  vetores são
+idênticos. 
+
+\item Faça um programa em  que leia dois vetores de números reais
+e descubra se um deles é permutação do outro, isto é, se eles
+tem os mesmos elementos, ainda que em ordem diferente.
+A quantidade de elementos lidos em cada vetor é no  máximo 100,  e
+cada sequência termina quando o valor 0 é digitado. 
+Por   exemplo: 
+
+        $[2,2,0,3,4]$   e  $[2,2,0,3,4]$:   sim.
+  
+        $[2,2,0,3,4]$ e  $[4,3,2,0,2]$: sim.
+        
+        $[2,2,0,3,4]$ e $[4,3,4,0,2]$: não. 
+        
+        $[3,0,5]$ e $[3,0,5,3]$: não.
+
+Implemente três
+versões deste problema:
+\begin{itemize}
+\item ordenando os vetores para em seguida compará-los;
+\item sem ordenar os vetores;
+\item crie uma
+ função que  retorna  0 se $x$  não  pertence a  $v$ e  caso contrário
+ retorna o índice  do vetor onde  $x$  se encontra. Use esta função para 
+ resolver este problema. 
+\end{itemize}
+
+
+
+
+\item Faça  um  programa  que   leia  duas  sequências  de  inteiros,  não
+necessariamente  contendo a  mesma quantidade  de números. Seu programa
+deverá:
+\begin{itemize} 
+\item dizer  se a segunda sequência está contida na primeira. Exemplo:
+\begin{verbatim}
+v1: 7 3 2 3 2 6 4 7 
+v2: 3 2 6
+Saída: sim
+\end{verbatim}
+\item construir um terceiro  vetor, sem  destruir os  originais, que é  
+      a concatenação  do primeiro com o segundo;
+\begin{verbatim}
+v1: 7 3 2 6
+v2: 5 1 8 4 9
+Saída: 1 2 3 4 5 6 7 8 9
+\end{verbatim}
+\item ordená-los, e em seguida imprimir todos os números ordenados 
+      em ordem crescente. Exemplo:
+\begin{verbatim}
+v1: 7 3 2 6
+v2: 5 1 8 4 9
+Saída: 1 2 3 4 5 6 7 8 9
+\end{verbatim}
+\end{itemize}
+
+\item Crie uma função que receba um vetor de inteiros de 
+     tamanho $n$ e devolva o valor \emph{true} se o vetor estiver ordenado e 
+     \emph{false} em caso contrário.
+
+\item Aproveitando as soluções dos problemas anteriores, escreva um programa
+     que leia dois vetores de inteiros $v$ e $w$, 
+     de dimensões $m$ e $n$ 
+     respectivamente, verifique se eles estão ordenados, ordene-os em caso 
+     contrário e, em seguida, imprima a intercalação dos dois. \\
+     Exemplo de intercalação: $v$: 1 4 6 9; $w$: 2, 3, 5, 7. \\
+     Saída: 1, 2, 3, 4, 5, 6, 7, 9. 
+
+\item Dados dois números naturais $m$ e $n$, uma frase com $m$ letras
+e uma palavra com $n$ letras, escreva um procedimento que determine o número de
+vezes que a palavra ocorre na frase e a posição em que cada ocorrência inicia.
+
+    Exemplo:
+    \begin{verbatim}
+    Para M = 30, N = 3, a palavra ANA e a frase:
+        ANA E MARIANA GOSTAM DE BANANA
+    A palavra ANA ocorre 4 vezes, nas posições 1, 11, 26, 28.
+    \end{verbatim}
+
+\item Dada uma sequência de $N$ números, determinar quantos números dintintos
+compõe  a sequência e  o número  de vezes  que cada  um deles  ocorre na
+mesma. Exemplo:
+
+N=5
+1 2 3 2 3 
+a sequência tem três números distintos, 1, 2 e 3. Ocorrências:
+1 ocorre 1 vez
+2 ocorre 2 vezes
+3 ocorre 2 vezes
+
+\item Dadas  duas  sequências  com  $n$  números  inteiros  entre  0  e  1,
+interpretados como números binários:
+\begin{enumerate}
+     \item imprimir o valor decimal dos números;
+     \item calcular a soma de ambos (em binário), usando o ``vai-um'';
+     \item imprimir o valor decimal da soma.
+\end{enumerate}
+
+
+\item Escreva um programa em  que leia os seguintes valores:
+um inteiro $B$, um inteiro $N$ ($1 \leq N \leq 10$), e $N$ valores inteiros.
+A ideia é que estes valores sejam entendidos como a representação
+de um número não negativo na base $B$. 
+Estes valores deverão ser inseridos em um vetor de tamanho $N+1$, onde
+a primeira posição armazena a base $B$ e as outras $N$ posições
+o restante dos números lidos. 
+%
+Note que o  intervalo de valores possíveis para cada dígito na
+base $B$ é $[0, B-1]$.
+%
+Seu programa deve retornar o valor em decimal do número representado
+no vetor. Se o número representado no vetor não for válido na
+base $B$ então deverá ser retornado o código de erro ``-1''.
+Por exemplo, se $B=3$ o número 2102 na base 3 equivale ao valor decimal 65;
+se $B=4$ o número $35$ é inválido na base 4.
+
+
+\item Faça um programa que, 
+dadas duas sequências com
+$N$ números inteiros entre 0 e 9, interpretadas como dois números
+inteiros de $N$ algarismos, calcular a sequência de números que
+representa a soma dos dois inteiros, usando o ``vai-um''. Por exemplo:\\
+
+\verb|        N=6,|\\
+\verb|                4 3 4 2 5 1|\\
+\verb|              + 7 5 2 3 3 7|\\
+\verb|              1 1 8 6 5 8 8|
+
+
+
+\item Dada  uma  sequência  $x_1$,  $x_2$, \ldots,  $x_n$  de  
+números  inteiros,
+determinar um segmento de soma  máxima.  Exemplo: na sequência 5, 2, -2,
+-7, 3, 14,  10, -3, 9, -6, 4,  1, a soma do maior segmento  é 33, obtida
+pela soma dos números de 3 até 9. 
+ 
+\item Implemente um programa que leia um vetor de 1 milhão de inteiros
+   em um vetor de inteiros. Gere um número aleatório e o procure
+   neste vetor de duas maneiras diferentes: uma usando busca com 
+   sentinela e outra usando busca binária. Seu programa deve imprimir
+   uma tabela com o número de comparações feitas em cada um dos casos
+   acima (busca com sentinela e busca binária). Desconsidere o tempo
+   gasto com ordenação no caso da busca binária. A busca com sentinela
+   deve ser feita em um vetor não ordenado. Gere 200 números aleatórios
+   e imprima a média de comparações para cada um dos dois algoritmos
+   sendo testados.
+
+\item 
+Suponha que um ex\'ercito tenha 20 regimentos e que eles est\~ao em processo
+de forma\c c\~ao. Inicialmente o primeiro tem 1000 homens, o segundo 950,
+o terceiro 900, e assim por diante, at\'e o vig\'esimo que tem 50. Suponhamos
+que a cada semana 100 homens s\~ao enviados para cada regimento, e no final
+da semana o maior regimento \'e enviado para o {\em front}. Imaginemos que o
+general do quinto regimento \'e companheiro de xadrez do comandante supremo,
+e que eles est\~ao no meio de uma partida. O comandante supremo ent\~ao
+envia apenas 30 homens para o quinto regimento a cada semana, esperando com
+isto poder acabar o jogo com seu colega.
+Escreva um programa em 
+que diga, a cada semana, qual \'e o regimento enviado ao {\em front} e mostre o {\em status} dos outros regimentos. O programa
+deve tamb\'em determinar exatamente quantas semanas levar\'a o quinto regimento
+para ser deslocado ao {\em front}. 
+
+\item Suponha que voc\^e esteja usando o m\'etodo da ordenação 
+por sele\c c\~ao. Qual das sequências abaixo requerir\'a o menor n\'umero
+de trocas? Quantas? Qual requerir\'a o maior n\'umero de trocas? Quantas?
+Explique.
+\begin {enumerate}
+\item 10, 9, 8, 7, 6, 5, 4, 3, 2, 1.
+\item 5, 4, 3, 2, 1, 10, 9, 8, 7, 6.
+\item 10, 1, 9, 2, 8, 3, 7, 4, 6, 5.
+\item 2, 3, 4, 5, 6, 7, 8, 9, 10, 1.
+\item 1, 10, 2, 9, 3, 8, 4, 7, 5, 6.
+\end {enumerate}
+
+\item Suponha que voc\^e tem uma vari\'avel do tipo vetor declarada como:
+\emph{array [1..50] of real;}. 
+Fa\c ca uma fun\c c\~ao 
+que inicialize o vetor de modo que os elementos
+de \'{\i}ndices \'{\i}mpares recebam o valor inicial -2.0 e os elementos
+de \'{\i}ndices pares recebam o valor inicial 7.0. Sua função deve
+fazer uso de um único comando de repetição, que incrementa de um em um, e de 
+nenhum comando de desvio condicional.
+
+\item Qual dos seguintes problemas requer o uso de vetores para uma solu\c c\~ao elegante?
+\begin {enumerate}
+\item Ler cerca de duzentos n\'umeros e imprimir os que est\~ao em uma certa faixa;
+\item Computar a soma de uma sequ\^encia de n\'umeros;
+\item Ler exatamente duzentos n\'umeros e orden\'a-los em ordem crescente;
+\item Encontrar o segundo menor elemento de uma sequ\^encia de entrada;
+\item Encontrar o menor inteiro de uma sequ\^encia de inteiros.
+\end {enumerate}
+
+\item Considere um vetor  declarado como: 
+\emph{array [1..50] of integer} que tem a 
+particularidade de todos os elementos estarem entre 1 e 30, sendo que
+nenhum \'e repetido. Fa\c ca um programa
+que ordene o vetor de maneira eficiente explorando esta característica e fazendo
+o menor n\'umero poss\'{\i}vel de trocas.
+
+\item   Dada uma sequência $x_1, x_2, \ldots, x_k$ de números
+  reais, verifique  se existem dois segmentos  consecutivos iguais nesta
+  sequência, isto é, se existem $i$ e $m$ tais que:
+\[ x_i, x_{i+1}, \ldots, x_{i+m-1}=x_{i+m}, x_{i+m+1}, \ldots, x_{i+2m-1}.
+\]
+Imprima, caso existam,  os valores de $i$ e de  $m$. Caso contrário, não
+imprima  nada. Exemplo:  Na sequência  7,9,5,4,5,4,8,6, existem  $i=3$ e
+$m=2$. 
+
+\item   Um coeficiente binomial, geralmente denotado
+  $\binom{n}{k}$, representa o número de possíveis combinações de $n$
+  elementos tomados $k$ a $k$. Um ``Triângulo de Pascal'', uma homenagem
+  ao grande matemático Blaise Pascal, é uma tabela de valores de
+  coeficientes combinatoriais para pequenos valores de $n$ e $k$. Os
+  números que não são mostrados na tabela têm valor zero. Este triângulo
+  pode ser construído automaticamente usando-se uma propriedade
+  conhecida dos coeficientes binomiais, denominada ``fórmula da
+  adição'':
+$\binom{r}{k} = \binom{r-1}{k} + \binom{r-1}{k-1}.$
+Ou seja, cada elemento do triângulo é a soma de dois elementos da linha
+anterior, um da mesma coluna e um da coluna anterior. 
+Veja  um  exemplo de  um  triângulo  de Pascal  com  7  linhas:
+\[\begin{array}{ccccccc}
+1 \\
+1 & 1 \\
+1 & 2 & 1 \\
+1 & 3 & 3 & 1 \\
+1 & 4 & 6 & 4 & 1 \\
+1 & 5 & 10 & 10 & 5 & 1 \\
+1 & 6 & 15 & 20 & 15 & 6 & 1 \\
+\end{array}
+\]
+Faça um programa que imprima na tela um triângulo de Pascal
+com 10 linhas.  Seu programa deve obrigatoriamente fazer uso de
+exatamente dois vetores durante o processo de construção. Um deles
+conterá a última linha ímpar gerada, enquanto que o outro conterá a
+última linha par gerada. Lembre-se que os elementos que não aparecem na
+tabela tem valor nulo. Você deve sempre ter o controle do tamanho da
+última linha impressa (o tamanho útil dos vetores em cada passo). Você
+deve também usar um procedimento para imprimir o vetor. Observe que não
+há entrada de dados, os dois vetores são gerados, um a partir do outro.
+O único elemento da primeira linha tem o valor 1. Você deve
+obrigatoriamente declarar um tipo vetor com tamanho máximo
+Tam\_max\_vetor, e o seu programa deverá tomar cuidado para manipular
+corretamente vetores de tamanho menor do que o tamanho máximo, impedindo
+que haja uma atribuição em posição ilegal de memória. 
+
+
+\item Resolva o problema do triângulo de Pascal usando somente um vetor.
+
+\item Seja um polinômio $p(x)= a_0 + a_1 x + a_2 x^2 + \ldots + a_n x^n$ de
+  grau $n \ge 2$. Uma possível maneira de calcular uma raiz do polinômio
+  é pelo ``método de Newton''. Este método consiste em se fornecer uma
+  aproximação inicial para a raiz, isto é, um valor que não é a raiz
+  exata, mas é um valor próximo.  Assim, se $x_0$ é esta
+  aproximação inicial, $p(x_0)$ não é zero mas espera-se que
+  seja próximo de zero.  A obtenção da raiz pelo método de Newton é
+  feita pelo refinamento desta solução inicial, isto é, pela tentativa
+  de minimizar o erro cometido. Isto é feito pela expressão seguinte:
+\[x_{n+1}=x_{n}-\frac{p(x_{n})}{p\prime(x_{n})},\]  $n=0,1,2,\ldots$,  e
+  onde $p\prime(x)$ é a primeira derivada de $p(x$). Usualmente, repete-se
+  este refinamento até que $|x_{n+1}-x_{n}| < \epsilon, \epsilon>0$, ou
+  até que $m$ iterações tenham sido executadas. \\
+  Construa um programa em  que receba como dados de entrada 
+  um polinômio $p(x)= a_0 + a_1 x + a_2 x^2 + \ldots + a_n x^n$ e
+  uma  aproximação inicial  $x_0$ da  raiz de  $p(x)$, $\epsilon>0$  e o
+  número  máximo de  iterações, e  calcule  uma aproximação  da raiz  de
+  $p(x)$ pelo método de Newton. Utilize obrigatoriamente um procedimento
+  que receba como parâmetro  um polinômio $p(x)$ (incluindo a informação
+  sobre o grau do polinômio) e que calcule e retorne a função
+  derivada  $p\prime(x)$.  Utilize também  uma  função  que receba  como
+  parâmetros um polinômio $p(x)$ e um valor real $\overline{x}$ e retorne
+  o   valor    do   polinômio    no   ponto   $\overline{x}$,    isto   é
+  $p(\overline{x})$. Use  esta função para  calcular, a cada  iteração do
+  método    de    Newton,    os    valores   de    $p(x_{n})$    e    de
+  $p\prime(x_{n})$.  
+
+\item Faça um programa em  que leia uma sequência de 10 
+     letras (caracteres de A a Z), as armazene em um vetor de 10 posições 
+     e imprima a lista de letras repetidas no vetor. Sendo assim, para os 
+     dados: A J G A D F G A A, a saída deve ser: A G.
+
+\item Escreva o programa da busca binária de um valor $x$ num 
+     vetor de inteiros que, ao invés de achar a primeira ocorrência do valor 
+     na lista, identifique e imprima o menor índice do vetor no qual o valor 
+     ocorra.
+
+\item Escreva um programa que leia uma sequência de {\em código de
+operação} e {\em valor}, onde o {\em código de operação} é um inteiro com
+os seguintes valores:
+\begin{itemize}
+\item 0 (zero): fim
+\item 1 (um): inserção
+\item 2 (dois): remoção
+\end{itemize} 
+
+O {\em valor} lido é um real que deve ser inserido em um vetor (caso a
+operação seja 1), ou removido do vetor (caso a operação seja 2).   As
+inserções no vetor devem ser realizadas de forma que o vetor esteja sempre
+ordenado.   No final do programa o vetor resultante deve ser impresso.
+
+Detalhamento:
+\begin{itemize}
+\item a quantidade máxima de valores que pode  ser inserida é 100;
+\item se a quantidade máxima for ultrapassada o programa deve dar uma
+mensagem de erro;
+\item se for requisitada a remoção de um número não existente o programa
+  deve dar uma mensagem de erro;
+\item se o código de operação for inválido o programa deve continuar lendo
+um novo código até que ele seja 0 (zero), 1 (um) ou 2 (dois).
+\end{itemize}
+
+\noindent
+{\bf Exemplo de execução: }
+\begin{small}
+\begin{verbatim}
+Entre com operacao (0=fim, 1=insercao, 2=remocao): 1 
+Valor: 45.3 
+Entre com operacao (0=fim, 1=insercao, 2=remocao): 1 
+Valor: 34.3 
+Entre com operacao (0=fim, 1=insercao, 2=remocao): 1 
+Valor: 40.8
+Entre com operacao (0=fim, 1=insercao, 2=remocao): 2 
+Valor: 34.3
+Entre com operacao (0=fim, 1=insercao, 2=remocao): 0
+Vetor resultante
+40.8   45.3 
+\end{verbatim}
+\end{small}
+
+\begin{center}
+\begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|l}
+\multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6} & \\ \cline{1-6} 
+&&&&&& \mbox{início}\\ \cline{1-6}
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \\ \cline{1-6} 
+45.3&&&&&& \mbox{após inserção de 45.3}\\ \cline{1-6}
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \\ \cline{1-6} 
+34.3&45.3&&&&& \mbox{após inserção de 34.3}\\ \cline{1-6}
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \\ \cline{1-6} 
+34.3&40.8&45.3&&&& \mbox{após inserção de 40.8}\\ \cline{1-6}
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} & \\ \cline{1-6} 
+40.8&45.3&&&&& \mbox{após remoção de 34.3}\\ \cline{1-6}
+\end{tabular}
+\end{center}
+
+\item Escreva um programa 
+que leia duas sequências de caracteres e
+verifica se a segunda sequência é subpalavra da primeira.
+Por exemplo, {\em todo} é subpalavra de {\em metodo} e
+{\em ar} é subpalavra de {\em farmacia}.  Porém, {\em todo} não é
+subpalavra de {\em todavia}.   A leitura das sequências deve ser feita
+caracter por caracter e o final de cada sequência é sinalizada pelo
+caracter '.'.    Se a segunda sequência é uma subpalavra, a saída do 
+programa deve ser a posição na qual ela começa.  Caso contrário, escrever
+a mensagem ``Nao eh subpalavra.''. 
+{Observações:} 
+\begin{itemize}
+\item cada sequência tem no máximo 80 caracteres.
+\item você não pode utilizar funções de manipulação de cadeias de
+caracteres existentes no compilador, mas somente as funções para o
+tipo {\tt char}.
+\end{itemize}
+
+\noindent
+{Exemplo de execução: }
+\small
+\begin{verbatim}
+Entre com duas palavras terminadas por ponto:
+metodo.todo.
+
+A segunda subpalavra comeca na posicao 3 da primeira.
+\end{verbatim}
+
+
+
+\item Escreva um programa que leia uma sequência de $n$ valores
+reais ($n \leq 100$) e os insira num vetor.  A sequência termina quando o
+valor lido for 0.  O programa deve escrever o valor da divisão 
+da soma dos valores positivos pela soma dos valores
+negativos que estão armazenados no vetor. Cuidado com divisões por zero.
+
+\item Escreva uma função em  que substitui em um texto a primeira
+ocorrência de  uma   palavra por   outra.  A  função  deve  retornar
+\verb+true+ se a subs\-ti\-tui\-ção for bem sucedida e
+\verb+false+ caso a palavra  não seja encontrada no  texto.  O texto e
+as palavras são  representados  por vetores  do  tipo \verb+char+. Por
+exemplo:
+\vspace{-0.2cm}
+\begin{center}
+\begin{small}
+\begin{verbatim}
+        +---+---+---+---+---+---+---+---+---+---+
+texto1  | e | x | e | m | p | r | o |   | u | n |
+        +---+---+---+---+---+---+---+---+---+---+
+          +---+---+---+---+---+
+palavra1  | r | o |   | u | n |
+          +---+---+---+---+---+
+          +---+---+---+---+---+---+---+
+palavra2  | l | o |   | d | o | i | s |
+          +---+---+---+---+---+---+---+
+        +---+---+---+---+---+---+---+---+---+---+---+---+
+texto2  | e | x | e | m | p | l | o |   | d | o | i | s |
+        +---+---+---+---+---+---+---+---+---+---+---+---+
+\end{verbatim}
+\end{small}
+\end{center}
+\vspace{-0.2cm}
+A função recebe como parâmetros o texto, a palavra a ser substituída e
+a nova palavra.  No exemplo, \verb+texto1+  mostra o estado inicial do
+texto  e \verb+texto2+  o   estado do texto  após  a   substituição da
+\verb+palavra1+ pela \verb+palavra2+.
+
+Você pode usar, caso seja necessário, a função:
+\begin{center}
+\begin{small}
+\begin{verbatim}
+   buscachar(texto, pos, letra);
+\end{verbatim}
+\end{small}
+\end{center}
+que busca  um  caractere (\verb+letra+) a  partir   de uma determinada
+posição (\verb+pos+) em um vetor que  contém o texto (\verb+texto+). A
+função \verb+buscaletra+  retorna a posição  no  vetor \verb+texto+ da
+primeira ocorrência  de  \verb+letra+, se \verb+letra+  não aparece no
+texto a função retorna \verb+-1+.
+
+\item Um \emph{algoritmo genético} é um procedimento computacional de busca,
+inspirado no processo biológico de  evolução, que otimiza a solução de
+um  pro\-ble\-ma.  O   problema é   modelado por: uma    população de
+indivíduos que representam possíveis soluções; uma função que avalia a
+qualidade da solução representada por cada indivíduo da população e um
+conjunto  de operadores  genéticos.   Os   indivíduos  são dados   por
+sequências   de genes que   representam características  da solução do
+problema.  O procedimento consiste  em aplicar os operadores genéticos
+sobre a população, gerando novos indivíduos e selecionar os mais aptos
+para  constituirem uma  nova população.  Esse  processo é repetido até
+que uma solução adequada seja obtida.  Dentre os operadores genéticos,
+o mais importante é  o de recombinação genética  (\emph{crossover}) de
+dois indivíduos.  Esse operador corta  em duas partes as sequências de
+genes de dois indivíduos pais (\verb+pai1+  e \verb+pai2+) e gera dois
+novos   indivíduos    filhos    (\verb+filho1+    e    \verb+filho2+).
+\verb+filho1+ é dado pela contatenação da primeira  parte dos genes de
+\verb+pai1+  com a segunda parte  de  \verb+pai2+ e \verb+filho2+ pela
+concatenação  da primeira parte de \verb+pai2+  com a segunda parte de
+\verb+pai1+.  O diagrama abaixo  exemplifica a operação  em indivíduos
+representados por vetores de números inteiros  onde a primeira posição
+contém o tamanho do vetor:
+\vspace{-0.2cm}
+\begin{center}
+\begin{small}
+\begin{verbatim}
+                          corte1
+        +----+---+---+---#---+---+---+---+---+---+---+---+
+pai1    | 11 | 1 | 1 | 1 # 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+        +----+---+---+---#---+---+---+---+---+---+---+---+
+
+                                  corte2
+        +----+---+---+---+---+---#---+---+---+---+---+
+pai2    | 10 | 3 | 3 | 3 | 3 | 3 # 4 | 4 | 4 | 4 | 4 |
+        +----+---+---+---+---+---#---+---+---+---+---+
+
+        +----+---+---+---+---+---+---+---+---+
+filho1  |  8 | 1 | 1 | 1 | 4 | 4 | 4 | 4 | 4 |
+        +----+---+---+---+---+---+---+---+---+
+
+        +----+---+---+---+---+---+---+---+---+---+---+---+---+---+
+filho2  | 13 | 3 | 3 | 3 | 3 | 3 | 2 | 2 | 2 | 2 | 2 | 2 | 2 | 2 |
+        +----+---+---+---+---+---+---+---+---+---+---+---+---+---+
+\end{verbatim}
+\end{small}
+\end{center}
+Escreva um procedimento  em  que   execute a operação   de
+recombinação descrita acima, usando  a estrutura de dados vetor.  O
+procedimento deve  receber seis parâmetros, um vetor re\-pre\-sentando
+o primeiro pai,   a posição  de   corte no   primeiro  pai, um   vetor
+re\-pre\-sentando o segundo pai, a posição do corte  no segundo pai, e
+dois vetores que receberão os novos indivíduos. No exemplo apresentado
+a chamada do procedimento seria:
+\vspace{-0.2cm}
+\begin{center}
+\begin{small}
+\begin{verbatim}
+   corte1 := 4;
+   corte2 := 6;
+   crossover(pai1, corte1, pai2, corte2, filho1, filho2);
+\end{verbatim}
+\end{small}
+\end{center}
+\vspace{-0.2cm}
+Note que os vetores  devem iniciar na   posição zero e essa  posição é
+usada para armazenar o tamanho do vetor. No caso do exemplo,
+\verb+ pai1[0]=11+, 
+\verb+ pai2[0]=10+,
+\verb+filho1[0]=8 + e
+\verb+ filho2[0]=13+.
+Os pontos de corte devem estar dentro dos vetores:
+\verb+1 < corte1 <= pai1[0] + e 
+\verb+ 1 < corte2 <= pai2[0]+.
+
+\item Escreva um procedimento em  
+que implemente a subtração de números
+binários. Considere que os números binários têm $N$ bits e que os bits
+são armazenados em vetores de inteiros de $N$ posições indexadas de 1 a 
+$N$. O primeiro bit do vetor representa o sinal do número, sendo zero (0) 
+para o números positivos e um (1) para negativos. Os demais bits 
+representam o valor absoluto do número. Por exemplo, para $N=11$, os 
+números decimais $-13$, 12 e 1010 são representados pelos seguintes 
+vetores:
+\begin{center}
+\begin{small}
+\begin{verbatim}
+        +---+---+---+---+---+---+---+---+---+---+---+
+   -13: | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 1 |
+        +---+---+---+---+---+---+---+---+---+---+---+
+
+        +---+---+---+---+---+---+---+---+---+---+---+
+    12: | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1 | 1 | 0 | 0 |
+        +---+---+---+---+---+---+---+---+---+---+---+
+
+        +---+---+---+---+---+---+---+---+---+---+---+
+  1010: | 0 | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 1 | 0 |
+        +---+---+---+---+---+---+---+---+---+---+---+
+\end{verbatim}
+\end{small}
+\end{center}
+O procedimento recebe dois vetores do mesmo tamanho como parâmetros e 
+deve gerar como resultado um vetor que contenha a subtração do 
+primeiro pelo segundo. Por exemplo $-12 - 1010 = -1022$:
+\begin{center}
+\begin{small}
+\begin{verbatim}
+        +---+---+---+---+---+---+---+---+---+---+---+ 
+  -998: | 1 | 1 | 1 | 1 | 1 | 1 | 0 | 0 | 1 | 1 | 0 |
+        +---+---+---+---+---+---+---+---+---+---+---+ 
+\end{verbatim}
+\end{small}
+\end{center}
+Caso o resultado tenha mais bits que o espaço disponível no vetor
+o procedimento deve descartar os bits excedentes. 
+
+\item Escreva um programa em  
+que leia uma sequência de $N$ valores
+reais não nulos ($N \leq 100$) e os insira em um vetor.
+A sequência termina quando o valor lido for 0. O elemento zero não faz
+parte do vetor. Leia do teclado um inteiro $p$ ($p \leq N$) e
+considere que o elemento $V[p]$ como o pivô na operação
+de rearranjar o vetor de tal maneira que todos os elementos à
+esquerda de $V[p]$ sejam menores que ele e todos os da direta sejam
+maiores ou iguais a ele. Por exemplo, considere o seguinte vetor dado
+como entrada: 
+\begin{center}
+\begin{small}
+\begin{verbatim}
+    +------+------+------+------+------+------+------+
+    | 99.7 | 32.6 | 2.45 | 13.4 | 26.7 | 12.2 | 0.51 | 
+    +------+------+------+------+------+------+------+
+\end{verbatim}
+\end{small}
+\end{center}
+e $P$ valendo 3, o programa deve gerar como resultado um vetor onde
+todos os elementos que estão à esquerda do valor $2.45$ no vetor sâo menores
+que ele, enquanto que os da direita são maiores do que ele.
+
+\item Escreva uma função em  que procura uma palavra dentro
+de um texto. A função deve receber como parâmetros:
+\begin{itemize}
+\item um vetor do tipo \verb+texto+ que contém um texto;
+\item o tamanho do vetor que contém o texto;
+\item a posição inicial da busca dentro do vetor que contém o 
+texto;
+\item um vetor do tipo \verb+texto+ que contém uma palavra;
+\item o tamanho do vetor que contém a palavra.
+\end{itemize}
+A função deve retornar um número inteiro indicando a posição
+no texto onde a palavra foi encontrada pela primeira vez. 
+
+Caso a palavra não seja encontrada ou algum erro ocorra o 
+valor retornado deve ser zero. A busca pela palavra no texto 
+deve iniciar na posição passada como parâmetro para a função.
+
+O tipo \verb+texto+ é dado por:
+\begin{center}
+\begin{small}
+\begin{verbatim}
+   const
+      TAMMAX = 10000;
+
+   type
+      texto = array [1..TAMMAX] of char;
+
+\end{verbatim}
+\end{small}
+\end{center}
+
+\item Escreva um programa em  que gere e imprima um
+vetor de números reais de tamanho $N$, $1 \le N \le MAX$. A criação
+do vetor deve ser feita da seguinte maneira:
+\begin{itemize}
+\item O tamanho $N$ do vetor deve ser lido do teclado; 
+\item Os $N$ números reais são gerados aleatoriamente no
+intervalo $[R_{min},R_{max}[$, com $R_{min}$ e $R_{max}$ lidos do teclado;
+\item A posição em que cada elemento real é inserida no vetor também é gerada
+      aleatoriamente;
+\item Se uma posição $i$ sorteada já estiver ocupada, seu algoritmo deve
+encontrar a primeira posição $j$ não ocupada, iniciando a partir de $i+1$ até
+o final do vetor. Se todas as posição entre $i+1$ e o final do vetor
+estiverem ocupadas, seu algoritmo deve pegar a primeira posição livre a
+partir do início do vetor.
+\end{itemize}
+
+Dica: a função \verb|random| sem parâmetros retorna um número real no intervalo
+$[0,1[$, e a função \verb|random(n)| retorna um número inteiro no intervalo
+$[0,n[$.
+
+\item Escreva um procedimento em  que remove um
+  elemento de uma determinada posição $p$ de um vetor $v$ de $n$ números
+  reais. O vetor não está ordenado. 
+  Use a seguinte assinatura para o procedimento: 
+
+\verb!   procedure remove(var v: vetor; var n: integer; p: integer);!
+
+
+\item Escreva um procedimento em  que altere um
+  vetor de $N$ números reais da seguinte forma: todos os elementos
+  repetidos do vetor devem ir para o final do vetor, mas de maneira
+  que estes últimos fiquem em ordem crescente. Exemplos:
+
+\verb!   ENTRADA: 5 3 8 2 3 9 8 9 7 5 3               ENTRADA: 4 4 3 3 2 2!
+
+\vspace*{-1mm}
+\verb!   SAÍDA  : 5 3 8 2 9 7 3 3 5 8 9               SAÍDA  : 4 3 2 2 3 4!
+
+\item Em uma festa estiveram presentes 150 pessoas. Cada uma delas recebeu
+um crachá na entrada com um número entre 1 e 150, número que
+representa a ordem de entrada de cada convidado.
+
+Como em toda festa, cada um dos presentes cumprimentou outras pessoas
+com apertos de mão. Ao final da festa, cada convidado sabia exatamente
+quantas vezes tinha apertado a mão de outras pessoas.
+
+Na saída, ao entregar o crachá ao recepcionista, cada convidado
+informou o número do seu crachá e quantas vezes trocou apertos de mão
+na festa.
+
+Muito curioso, o recepcionista queria saber quantos convidados eram
+muito populares no encontro, isto é, queria saber o número de pessoas
+que apertaram a mão de pelo menos outros 120 convidados.
+
+Faça um programa
+que modele o problema do recepcionista e que produza como saída o
+número de celebridades (cumprimentadas pelo menos 120 vezes) presentes
+na festa.
+
+\item Um procedimento chamado \texttt{nova\_geracao} 
+recebe como parâmetros dois  vetores (origem e  destino) e o
+tamanho  dos vetores.  Este  procedimento constrói  um  novo vetor  de
+valores  0 ou  1  (destino) a  partir  do conteúdo  do primeiro  vetor
+(origem). Seja $O$ o vetor origem e $D$ o vetor destino, a regra para 
+a construção do novo vetor é dada por:
+\begin{itemize}
+\item 
+se: $O[i-1] = 0,\ O[i] = 0,\ O[i+1] = 0$ então: $D[i] = 0$
+\item 
+se: $O[i-1] = 0,\ O[i] = 0,\ O[i+1] = 1$ então: $D[i] = 1$
+\item 
+se: $O[i-1] = 0,\ O[i] = 1,\ O[i+1] = 0$ então: $D[i] = 1$
+\item 
+se: $O[i-1] = 0,\ O[i] = 1,\ O[i+1] = 1$ então: $D[i] = 1$
+\item 
+se: $O[i-1] = 1,\ O[i] = 0,\ O[i+1] = 0$ então: $D[i] = 1$
+\item 
+se: $O[i-1] = 1,\ O[i] = 0,\ O[i+1] = 1$ então: $D[i] = 0$
+\item 
+se: $O[i-1] = 1,\ O[i] = 1,\ O[i+1] = 0$ então: $D[i] = 0$
+\item 
+se: $O[i-1] = 1,\ O[i] = 1,\ O[i+1] = 1$ então: $D[i] = 0$
+\end{itemize}
+Onde $i$ indica uma posição do vetor $D$. Considere o valor 0 para as
+bordas externas do vetor origem $O$. Escreva o procedimento
+\texttt{nova\_geracao} e separe a regra descrita acima em uma função
+que dados os valores das 3 posições consecutivas do vetor origem
+($O[i-1], O[i], O[i+1]$) calcula o valor correspondente no vetor
+destino ($D[i]$).
+
+\item Faça um programa em  que simule o 
+tráfego em um trecho de uma rodovia de mão única, ou seja, uma rodovia na 
+qual os veículos entram de um lado e saem do outro. 
+
+\begin{itemize}
+    \item A rodovia é representada por um vetor com \verb|TAM_RODOVIA| posições;
+    \item A simulação ocorre durante \verb|MAX_TEMPO| iterações;
+    \item Através da chamada do procedimento \\
+          \verb|detecta_entrada(VAR tipo, placa, velocidade:INTEGER)|,\\
+          o programador é 
+          informado sobre a ocorrência ou não da entrada de um veículo na
+          rodovia, bem como o tipo do veículo, sua placa e sua respectiva 
+          velocidade, onde:
+        \begin{itemize}
+            \item \emph{tipo:} $0$ - nenhuma nova entrada, 
+                               $1$ - entrou automóvel, 
+                               $2$ - entrou caminhão;
+            \item \emph{placa:} um número inteiro;
+            \item \emph{velocidade:} a velocidade de deslocamento do veículo 
+                   (em posições/unidade de tempo).
+        \end{itemize}
+    \item Veículos do tipo automóvel ocupam uma posição da rodovia. 
+          Caminhões ocupam duas posições.
+    \item Quando veículos mais rápidos alcançam veículos mais lentos, os 
+          primeiros devem andar mais devagar, pois não podem ultrapassar.
+\end{itemize}    
+    
+
+A cada unidade de tempo em que algum veículo sair da rodovia, seu programa
+deve imprimir esta unidade de tempo e o número da placa do veículo que saiu.
+
+Exemplo: (\verb|TAM_RODOVIA=7|, \verb|MAX_TEMPO=10|)
+\begin{itemize}
+    \item Entrada:
+    \begin{itemize}
+        \item \textbf{t=1:} $tipo=2, placa=35, velocidade=1$
+        \item \textbf{t=2:} $tipo=0$
+        \item \textbf{t=3:} $tipo=1, placa=27, velocidade=4$
+        \item \textbf{t=4:} $tipo=0$
+        \item \textbf{t=5:} $tipo=0$
+        \item \textbf{t=6:} $tipo=1, placa=16, velocidade=2$
+        \item \textbf{t=7:} $tipo=0$
+        \item \textbf{t=8:} $tipo=0$
+        \item \textbf{t=9:} $tipo=0$
+        \item \textbf{t=10:} $tipo=0$
+    \end{itemize}
+
+    \item Representação gráfica:
+
+    \begin{itemize}
+        \item \textbf{t=1:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline $35_1$&$35_1$& & & & &\\ \hline \end{tabular}
+        \item \textbf{t=2:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline &$35_1$& $35_1$& & & &\\ \hline \end{tabular}
+        \item \textbf{t=3:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline $27_4$& & $35_1$&$35_1$ & & &\\ \hline \end{tabular}
+        \item \textbf{t=4:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & $27_4$& $35_1$& $35_1$& &\\ \hline \end{tabular}
+        \item \textbf{t=5:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & $27_4$& $35_1$& $35_1$&\\ \hline \end{tabular} 
+        \item \textbf{t=6:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline $16_2$& & & & $27_4$& $35_1$& $35_1$ \\ \hline \end{tabular} 
+        \item \textbf{t=7:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & &$16_2$ & & & $27_4$& $35_1$ \\ \hline \end{tabular} 
+        \item \textbf{t=8:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & & $16_2$& & $27_4$ \\ \hline \end{tabular}
+        \item \textbf{t=9:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & & & & $16_2$ \\ \hline \end{tabular}
+        \item \textbf{t=10:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & & & & \\ \hline \end{tabular}
+    \end{itemize}
+
+    \item Saída:
+    \begin{itemize}
+        \item \textbf{t=8:} $35$
+        \item \textbf{t=9:} $27$
+        \item \textbf{t=10:} $16$
+    \end{itemize}
+\end{itemize}
+
+%\begin{lstlistings}[frame=trBL]
+%Code
+%\end{lstlistings}
+
+
+\item Você deve incluir no enunciado da questão anterior a
+existência de uma pista de ultrapassagem. Agora, veículos mais rápidos 
+podem mover-se para a pista de ultrapassagem ao alcançarem veículos mais 
+lentos, desde que não haja ninguém ocupando aquele trecho de pista. 
+Eles devem retornar à pista original assim que tiverem completado 
+a ultrapassagem, retomando a velocidade original. Você deve escrever unicamente
+os procedimentos modificados ou novos que levam em conta este novo fato.
+
+Exemplo da nova saída para a entrada original:
+\begin{itemize}
+    \item Representação gráfica:
+    \begin{itemize}
+        \item \textbf{t=1:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & & & &\\
+            \hline $35_1$&$35_1$& & & & &\\ \hline \end{tabular}
+        \item \textbf{t=2:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & & & &\\ 
+            \hline &$35_1$& $35_1$& & & &\\ \hline \end{tabular}
+        \item \textbf{t=3:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & & & &\\ 
+            \hline $27_4$& & $35_1$&$35_1$ & & &\\ \hline \end{tabular}
+        \item \textbf{t=4:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & $27_4$& & &\\ 
+            \hline & & & $35_1$& $35_1$& &\\ \hline \end{tabular}
+        \item \textbf{t=5:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & & & &\\ 
+            \hline & & & & $35_1$& $35_1$&$27_4$\\ \hline \end{tabular} 
+        \item \textbf{t=6:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & & & &\\ 
+            \hline $16_2$& & & & & $35_1$& $35_1$ \\ \hline \end{tabular} 
+        \item \textbf{t=7:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & & & &\\ 
+            \hline & &$16_2$ & & & & $35_1$ \\ \hline \end{tabular} 
+        \item \textbf{t=8:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & & & &\\ 
+            \hline & & & & $16_2$& &  \\ \hline \end{tabular}
+        \item \textbf{t=9:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & & & &\\ 
+            \hline & & & & & & $16_2$ \\ \hline \end{tabular}
+        \item \textbf{t=10:} \begin{tabular}{|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}
+            \hline & & & & & &\\ 
+            \hline & & & & & & \\ \hline \end{tabular}
+    \end{itemize}
+    \item Saída:
+    \begin{itemize}
+        \item \textbf{t=6:} $27$
+        \item \textbf{t=8:} $35$
+        \item \textbf{t=10:} $16$
+    \end{itemize}
+\end{itemize}
+
+
+\item Mateus, um engenheiro novato, está desenvolvendo uma notação posicional original
+para representação de números inteiros. Ele chamou esta notação de UMC 
+(Um método curioso). A notação UMC usa os mesmos dígitos da notação decimal,
+isto é, de 0 a 9.
+%
+Para converter um número $A$ da notação UMC para a notação decimal deve-se
+adicionar $K$ termos, onde $K$ é o número de dígitos de $A$ (na notação UMC).
+O valor do $i$-ésimo termo correspondente ao $i$-ésimo dígito $a_i$, contando
+da direita para a esquerda é $a_i \times i!$. 
+
+Por exemplo, 719$_{UMC}$ é equivalente a 53$_{10}$, pois
+$7 \times 3! + 1 \times 2! + 9 \times 1! = 53$.
+
+Mateus está começando seus estudos em teoria dos números e 
+provavelmente não sabe quais as propriedades que um sistema de numeração
+deve ter, mas neste momento ele está interessado em converter
+os números da notação UCM para a notação decimal. Você pode ajudá-lo?
+
+\noindent
+\textbf{Entrada}:
+cada caso de teste é fornecido em uma linha simples que contém um 
+número não vazio de no máximo 5 dígitos, representando um número 
+em notação UMC. Este número não contém zeros a esquerda. O último
+teste é sequido por uma linha contendo um zero.
+
+\noindent
+\textbf{Saída}:
+para cada caso de teste imprimir uma linha simples contendo a representação
+em notação decimal do correspondente número em UMC seguido do cálculo feito
+para a conversão.
+
+\noindent
+\textbf{O programa}:
+seu programa deve, para cada número da entrada, convertê-lo em um vetor
+de inteiros, sendo que cada dígito do número é um elemento do vetor,
+e fazer os cálculos usando este vetor. 
+
+\noindent
+Exemplos de entrada e saída:
+\begin{verbatim}
+ENTRADA                SAÍDA
+719                    53 = 7 x 3! + 1 x 2! + 9 x 1!
+1                      1 = 1 x 1!
+15                     7 = 1 x 2! + 5 x 1!
+110                    8 = 1 x 3! + 1 x 2! + 0 x 1!
+102                    8 = 1 x 3! + 0 x 2! + 2 x 1!
+0 
+\end{verbatim}
+
+
+\item Sabemos que nos compiladores  mais recentes, nos
+  quais existe o tipo \textsf{string}, podemos realizar de maneira simples
+   operações com  palavras.  Imagine, no entanto, que  estamos usando um
+  compilador  \emph{Pascal}  no  qual  não  existe  este  tipo.  Neste  caso  o
+  programador deve  implementar por  sua própria conta  os procedimentos
+  com palavras. Neste exercício iremos considerar a seguinte 
+  declaração alternativa para o tipo \textsf{string}: \\
+\begin{center}
+\verb+type palavra = array[1..MaxTam] of char;+ 
+\end{center}
+  Implemente uma função em \emph{Pascal} que receba
+  como parâmetros duas variáveis do tipo \textsf{MeuString} e retorne -1 se a
+  primeira palavra for lexicograficamente menor que a segunda, 0 se
+  forem iguais, e +1 no caso que resta.
+
+
+
+\item Faça um programa que leia um certo número indefinido de
+vetores e que imprima o vetor original (O) e um vetor gerado (G)
+após um processo de compactação
+que consiste na eliminação de todos os elementos repetidos
+em cada vetor. Considere que a entrada de dados é feita em
+um vetor por linha, sendo que o primeiro elemento da linha é
+o tamanho de cada vetor e os elementos restantes da linha são
+os elementos do vetor. Quando o tamanho for zero significa que 
+terminou a entrada de dados. Por exemplo, considere a seguinte
+entrada:
+
+\begin{verbatim}
+5 2 4 7 -1 2
+3 1 1 1 
+7 3 4 5 3 4 5 1
+0
+\end{verbatim}
+
+Deverá produzir como saída o seguinte:
+
+\begin{verbatim}
+O: 2 4 7 -1 2
+G: 2 4 7 -1
+O: 1 1 1
+G: 1
+O: 3 4 5 3 4 5 1
+G: 3 4 5 1
+\end{verbatim}
+
+\item Considere uma sequência de dígitos binários como:
+
+011100011
+
+Uma maneira de criptografar essa sequência de bits é adicionar
+à cada dígito a soma dos seus dígitos adjacentes. Por exemplo,
+a sequência acima se tornaria:
+
+123210122
+
+Se $P$ é a sequência original e $Q$ é a sequência criptografada,
+então $Q[i] = P[i-1] + P[i] + P[i+1]$ para todas as posições $i$
+da sequência. Considerando uma sequência de tamanho $n$ e seus
+índices variando de $0$ a $n-1$, os dígitos $P[-1]$ e $P[n]$ não
+fazem parte da sequência original e são tratados como zeros na
+operação de codificação.
+
+Assumindo $P[0] = 0$ temos:
+\begin{itemize}
+\item
+$Q[0] = P[0] + P[1] = 0 + P[1] = 1$, logo $P[1] = 1$.
+\item
+$Q[1] = P[0] + P[1] + P[2] = 0 + 1 + P[2] = 2$, logo $P[2] = 1$.
+\item
+$Q[2] = P[1] + P[2] + P[3] = 1 + 1 + P[3] = 3$, logo $P[3] = 1$.
+\item
+Repetindo a operação temos: $P[4] = 0$, $P[5] = 0$, $P[6] = 0$, $P[7] = 1$ e $P[8] = 1$.
+\end{itemize}
+
+Agora repetindo o mesmo processo para $P[0] = 1$ temos:
+\begin{itemize}
+\item
+$Q[0] = P[0] + P[1] = 1 + P[1] = 1$, logo $P[1] = 0$.
+\item
+$Q[1] = P[0] + P[1] + P[2] = 1 + 0 + P[2] = 2$, logo $P[2] = 1$.
+\item
+$Q[2] = P[1] + P[2] + P[3] = 0 + 1 + P[3] = 3$, o que nos leva a conclusão que $P[3] = 2$.
+Entretanto isso viola o fato da sequência original ser binária. Portanto não
+existe uma decodificação possível considerando o primeiro dígito da sequência original
+valendo $1$.
+\end{itemize}
+Note que este algoritmo pode gerar ou decodificar uma sequência criptografada em até duas 
+possíveis sequências originais, uma iniciando com 0 e outra iniciando com 1.
+
+Escreva um procedimento em  que receba como parâmetros um vetor de
+números inteiros contendo a sequência criptografada e a decodifica em dois outros
+vetores de números inteiros. Caso uma das decodificações não seja possível, como
+no caso do exemplo para $P[0] = 1$, o vetor correspondente deve ser preenchido com -1
+na posição inicial.
+
+Outros exemplos:
+\begin{itemize}
+\item
+$123210122 = 011100011, -1$
+\item
+$11 = 01, 10$
+\item
+$22111 = -1, 11001$
+\item
+$123210120 = -1, -1$
+\item
+$3 = -1, -1$
+\item
+$12221112222221112221111111112221111 = \\
+01101001101101001101001001001101001, \\
+10110010110110010110010010010110010$
+\end{itemize}
+
+\item Escrever um programa para ler um texto e imprimir uma distribuição de
+   frequências para  palavras do texto  (quantas palavras de  uma letra,
+   quantas de duas letras, etc.).
+
+
+\item Escreva um programa em \emph{Pascal} que leia do teclado o gabarito de uma prova
+de 20 questões de múltipla escolha, onde as respostas são inteiros de 1 a
+5.  Em seguida, o programa deve ler o número de alunos que prestaram a prova
+e, para cada aluno, a sua matrícula (um inteiro) e as respectivas respostas.
+O programa deve calcular e escrever:
+\begin{itemize}
+\item a relação de alunos ordenados pela nota, supondo que cada questão vale 5 pontos;
+\item para cada questão: quantos alunos acertaram a questão
+\end{itemize}
+
+
+
+
+\end{enumerate}

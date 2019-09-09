@@ -1,0 +1,248 @@
+\section{Exercícios}
+
+
+\begin{enumerate}
+
+% atribuicoes dentro de repeticoes
+
+\item Dados  dois números inteiros  positivos determinar o valor  da maior
+    potência do primeiro que divide  o segundo. Se o primeiro não divide
+    o segundo, a maior potência é definida como sendo igual a 1. Por exemplo, a
+    maior potência de 3 que divide 45 é 9.
+
+\begin{minipage}{5cm}
+\begin{verbatim}
+Entrada:
+3 45
+\end{verbatim}
+\end{minipage} \
+\begin{minipage}{5cm}
+\begin{verbatim}
+Saída:
+9
+\end{verbatim}
+\end{minipage}
+
+
+% laco dentro de if
+
+\item Dadas as populações $P_A$ e $P_B$ de duas cidades $A$ e $B$ em 2009, e
+suas respectivas taxas de crescimento anual $X_A$ e $X_B$, faça um
+programa em \emph{Pascal} que receba estas informações como entrada e
+determine:
+\begin{itemize}
+\item
+se a população da cidade de menor população ultrapassará a de maior
+população;
+\item
+e o ano em que isto ocorrerá.
+\end{itemize}
+
+% if dentro de while
+
+\item Um inteiro positivo $N$ é perfeito se for igual a soma de seus
+divisores positivos diferentes de $N$.
+
+Exemplo: 6 é perfeito pois $1 + 2 + 3 = 6$ e $1, 2, 3$ são todos os
+divisores positivos de 6 e que são diferentes de 6.
+
+Faça um programa em \emph{Pascal} que recebe como entrada um número
+positivo $K$ e mostre os $K$ primeiros números perfeitos.
+
+
+\item Faça um  programa em \emph{Pascal} que dado um inteiro positivo $n$, escreva
+todos os termos, do primeiro ao $n$-ésimo, da série abaixo.  Você pode
+assumir que o usuário nunca digita valores menores que 1 para $n$.
+
+\[ 5,6,11,12,17,18,23,24, \ldots\]
+
+% laco com varios ifs aninhados
+
+\item Faça um programa em \emph{Pascal} que, dada uma sequência de números naturais positivos terminada por $0$ (zero), imprimir o histograma da sequência dividido em quatro faixas (o histograma é a contagem do número de elementos em cada faixa):
+\begin{itemize}
+ \item Faixa 1: $1$ -- $100$;
+ \item Faixa 2: $101$ -- $250$;
+ \item Faixa 3: $251$ -- $20000$;
+ \item Faixa 4: acima de $20001$.
+\end{itemize}
+
+Exemplo:
+\begin{verbatim}
+Entrada: 347 200 3 32000 400 10 20 25 0
+Saída:  Faixa 1: 4
+        Faixa 2: 1
+        Faixa 3: 2
+        Faixa 4: 1
+\end{verbatim}
+
+%%% laço duplo
+
+\item Fazer um programa em \emph{Pascal} que leia uma sequência de
+ pares de números inteiros quaisquer, sendo dois inteiros por linha de
+entrada. A entrada de dados termina quando os dois números lidos forem nulos.
+Este par de zeros não deve ser processado e serve para marcar o
+término da entrada de dados.
+
+Para cada par $A,B$ de números lidos, se $B$ for maior do que
+$A$, imprimir a sequência $A,A+1, \ldots, B-1,B$. Caso contrário,
+imprimir a sequência $B,B+1, \ldots,A-1,A$.
+
+Exemplos:
+\begin{verbatim}
+Entrada      Saida
+4 6          4 5 6
+-2 1         -2 -1 0 1
+2 -3         -3 -2 -1 0 1 2
+0 0 
+\end{verbatim}
+
+
+\item  Fazer um programa em \emph{Pascal} que receba um
+   número inteiro $N$ como entrada e imprima cinco linhas
+contendo as seguintes somas, uma em cada linha:
+
+\begin{verbatim}
+   N
+   N + N
+   N + N + N
+   N + N + N + N
+   N + N + N + N + N
+\end{verbatim}
+
+Exemplo:
+
+\begin{minipage}{5cm}
+\begin{verbatim}
+Entrada:
+3
+\end{verbatim}
+\end{minipage} \
+\begin{minipage}{5cm}
+\begin{verbatim}
+Saída:
+   3
+   6
+   9
+   12
+   15
+\end{verbatim}
+\end{minipage}
+
+\item Fazer um programa em \emph{Pascal} que imprima
+  exatamente a saída especificada na figura 1 (abaixo) de maneira que,
+  em todo o programa fonte, não apareçam mais do que três comandos de impressão.
+
+\begin{center}
+\begin{minipage}{5cm}
+\begin{verbatim}
+1
+121
+12321
+1234321
+123454321
+12345654321
+1234567654321
+123456787654321
+12345678987654321
+
+    Figura 1
+\end{verbatim}
+\end{minipage}
+\end{center}
+
+\item Fazer um programa em {\emph Pascal} que imprima
+  exatamente a mesma saída solicitada no exercício anterior, mas que
+  use exatamente dois comandos de repetição.
+
+\item Adaptar a solução do exercício anterior para que a saída seja
+  exatamente conforme especificada na figura 2 (abaixo).
+
+\begin{center}
+\begin{minipage}{5cm}
+\begin{verbatim}
+        1
+       121
+      12321
+     1234321
+    123454321
+   12345654321
+  1234567654321
+ 123456787654321
+12345678987654321
+
+    Figura 2
+\end{verbatim}
+\end{minipage}
+\end{center}
+
+% laço duplo com if dentro
+
+\item Leia do teclado uma sequência de  $N > 0$ números quaisquer. Para cada
+valor lido, se ele for positivo, imprimir os primeiros 10 múltiplos
+dele.
+
+% estrutura complexa com varios whiles e ifs
+
+\item Sabe-se que um número da forma $n^3$ é igual a soma de $n$ números
+ímpares consecutivos.
+
+Exemplos:
+\begin{itemize}
+\item
+$1^3 = 1$
+\item
+$2^3 = 3 + 5$
+\item
+$3^3 = 7 + 9 + 11$
+\item
+$4^3 = 13 + 15 + 17 + 19$
+\end{itemize}
+
+Dado $M$, escreva um program em \emph{Pascal} que determine os ímpares
+consecutivos cuja soma é igual a $n^3$ para $n$ assumindo valores de
+1 a $M$.
+
+\item Faça um programa em {\em  \emph{Pascal}} que, dados
+dois números naturais  $m$ e $n$  determinar,  entre todos  os pares de
+números naturais $(x,y)$ tais que $x<=m$ e $y<=n$, um  par para o qual
+o valor da expressão $xy - x^2 + y$ seja máximo e calcular também esse
+máximo.
+
+\item (*) Escreva um programa em \emph{Pascal} para ler uma sequência de
+números inteiros, terminada em $-1$. Para cada número inteiro lido, o programa
+deve verificar se este número está na base binária, ou seja, se é composto
+somente
+pelos dígitos $0$ e $1$. Caso o número esteja na base binária, o programa deve
+imprimir seu valor na base decimal. Caso contrário, deve imprimir uma
+mensagem indicando que o número não é binário. Ao final do programa deve ser
+impresso, em formato decimal, o maior número válido (binário) da sequência.
+
+\vspace*{0.25cm}
+
+\noindent Dica: dado o número $10011$ em base binária, seu valor correspondente
+em base decimal será dado por
+\begin{equation*}
+1.2^4 + 0.2^3 + 0.2^2 + 1.2^1 + 1.2^0 = 19 
+\end{equation*}
+
+
+\vspace*{0.25cm}
+
+\noindent {\bf Exemplo:}
+\begin{verbatim}
+Entrada:    Saida:
+10011       19
+121         numero nao binario
+1010        10
+101010101   341
+0           0
+-1
+
+O maior numero binario foi 341
+\end{verbatim}
+
+
+
+
+\end{enumerate}
+
