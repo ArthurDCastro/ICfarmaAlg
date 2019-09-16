@@ -1,0 +1,32 @@
+\item  Aqui temos uma forma peculiar de realizar uma multiplicação entre
+dois números: multiplique o primeiro por 2 e divida o segundo por 2
+até que o primeiro seja reduzido a 1. Toda vez que o primeiro for
+impar, lembre-se do segundo. Não considere qualquer fração durante
+o processo. O produto dos dois números é igual a soma dos números
+que foram lembrados. Exemplo: $53 \times 26 =$
+
+\begin {tabbing}
+00012345\=10002345\=10002345\=10002345\=12000345\=12000345\=12000345\=12300045\=12345\=12345\=12345 \kill
+53 \> 26 \> 13 \> 6 \> 3 \> 1 \\
+26 \> 52 \> 104 \> 208 \> 416 \> 832 \\
+\\
+26 + \> \> 104 + \> \> 416 + \> 832 = 1378
+\end {tabbing}
+
+Fazer um programa em \emph{Pascal}
+que receba dois números inteiros e retorne o produto deles
+do modo como foi especificado acima.
+
+\begin{minipage}{5cm}
+\begin{verbatim}
+Entrada:
+53
+26
+\end{verbatim}
+\end{minipage} \
+\begin{minipage}{5cm}
+\begin{verbatim}
+Saída:
+1378
+\end{verbatim}
+\end{minipage}
